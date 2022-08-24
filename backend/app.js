@@ -3,7 +3,7 @@
 
 const express = require('express');
 const cors = require('cors');
-const songController = require('./controllers/songController');
+
 //configuration
 const app = express(); //invoke express and save in app
 
@@ -11,9 +11,8 @@ const app = express(); //invoke express and save in app
 app.use(express.json());
 app.use(cors());
 
-app.use('/api/songs', songController);
 app.use('/', (req, res) => {
-  res.send('Welcome to Tuner');
+  res.send('Welcome to Stock Tracking Dashboard');
 }); //look for the basic route in songController
 app.get('*', (req, res) => {
   res.status(404).send('Not found');
