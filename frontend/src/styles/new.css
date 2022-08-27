@@ -1,0 +1,136 @@
+.new {
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  margin-top: 5%;
+  border-radius: 2%;
+  font-size: 25px;
+  opacity: 0.98;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'sans-serif';
+  border-radius: 2%;
+  padding-bottom: 10px;
+}
+
+.new-list {
+  font-size: 30px;
+  font-weight: 900;
+  display: flex;
+  flex-direction: column;
+  float: left;
+  padding: 10%;
+}
+.form {
+  padding: 10%;
+}
+
+.color1 {
+  display: flex;
+  flex-direction: column;
+  background-color: #ae9e8d74;
+  margin-right: 10%;
+  margin-left: 50%;
+  font-size: larger;
+  padding: 40px;
+  padding-left: 10%;
+  padding-right: 10%;
+  border-radius: 10px;
+  border: 2px solid;
+  border-color: #ddd7b6;
+  box-shadow: 10px 5px 5px #282828;
+}
+
+.text {
+  color: #1c3c3e;
+}
+
+.new-label1 {
+  color: black;
+  font-size: larger;
+}
+
+.title {
+  padding-top: 2%;
+  color: #e1ddca;
+}
+
+.new-label {
+  color: #1d3c3d;
+  font-size: larger;
+}
+
+.text {
+  color: #1d3c3d;
+}
+
+input[type='submit'] {
+  float: right;
+  background-color: #e1ddcb;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: 'Love Ya Like A Sister', cursive;
+  font-size: 25px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-right: 18%;
+  margin-top: 2%;
+}
+
+input[type='submit']:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: '';
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform 0.2s ease-out;
+  z-index: -1;
+}
+
+input[type='submit']:hover:after {
+  transform: translate(0, 0);
+  text-decoration: underline;
+}
+
+input[type='submit']:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+input[type='submit']:hover {
+  outline: 0;
+  text-decoration: underline;
+  color: #317479;
+}
+
+/* a:hover {
+  color: #317479;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #24523f;
+} */
+@media (min-width: 768px) {
+  input[type='submit'] {
+    padding: 0 40px;
+  }
+}

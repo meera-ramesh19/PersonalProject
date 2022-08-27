@@ -1,0 +1,22 @@
+.home{
+    width: 90%;
+    margin: auto;
+    color:#262626;
+}
+
+
+.about
+     {
+      margin: auto; 
+      position:absolute;
+      bottom: 0;
+      height: 50px;
+      font-size: 20px;
+      left: 50%;
+      font-family: 'Italiana', serif;
+      color: rgb(0, 0, 0);
+     
+      }
+      
+
+      

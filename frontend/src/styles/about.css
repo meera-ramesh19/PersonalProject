@@ -1,0 +1,97 @@
+.profile {
+    height: 250px; 
+    padding: 2%;
+    border: 2px solid #E1DCCB;
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  float: left;
+}
+
+.aboutpage{
+    margin: auto;
+    width: 90%;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    color: #E1DCCA;
+    padding-bottom: 20px;
+    background-image: url('https://media.istockphoto.com/photos/old-wooden-pallet-plank-texture-background-picture-id1204646431?b=1&k=20&m=1204646431&s=170667a&w=0&h=S2LPM5JFE04V1DLxtAl5DOtx-6NRc--hRyfn2Z1iAaA=');
+    padding: 20px;
+    border-radius: 20px;
+}
+.aboutus{
+    font-size: 50px;
+    margin: 20px;
+    font-family: 'Fredericka the Great', cursive;
+    
+}
+
+.bio {
+ font-size: 28px;
+ margin-left: 30%;
+ margin-right: 15%;
+ 
+
+}
+
+.about-title {
+  font-family: 'Fredericka the Great', cursive;  
+  font-weight: 900;
+    padding: 10px;
+    margin: 20px;
+}
+.name {
+    padding: 2%;
+    margin: auto;
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: 800;
+    font-size: 50px;
+    color: #E1DCCB;
+}
+.border{
+     padding: 2%;
+}
+ .year {
+    text-align: center;
+ }
+
+.box{
+  font-family: 'Italiana', serif;
+  background-color: #86d0c24a;
+  border: 2px solid;
+  margin: auto;
+  padding-bottom: 20px;
+  border-radius: 10px;
+}
+
+ hr {
+     border: #0c4b18a5 .5px solid;
+ }
+ .github{
+   padding-left: 2%;
+   padding-right: 2%;
+ }
+
+.appbio {
+ margin: 20px;
+ margin-right: 20px;
+}
+
+.github :hover{
+    color: #ffffff;
+  box-shadow: 0 15px 15px #1E3C3D;
+}
+
+
+.year
+     {
+        font-size: 20px;
+      
+      
+      }
+      
