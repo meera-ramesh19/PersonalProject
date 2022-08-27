@@ -1,0 +1,146 @@
+.edit{
+    text-align: center;
+    width: 90%;
+    background-color: #fae7e498;
+    margin: auto;
+    margin-top: 5%;
+    border-radius: 2%;
+    font-size: 25px;
+    opacity: .98;
+    background-image: url('https://www.usnews.com/object/image/0000016f-e7ee-dc4a-a1ef-fffe022a0000/hummuswithveggiesboard.jpg?update-time=1580144389028&size=responsive640');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Shadows Into Light', cursive;
+    border-radius: 2%;
+  }
+
+  .edit-p{
+font-size: 30px;
+font-weight: 900;
+display: flex;
+flex-direction: column;
+float: left;
+padding: 10%;
+
+}
+.form{
+    padding: 10%;
+
+    
+    
+}
+
+.color2{
+  display: flex;
+  flex-direction: column;
+  background-color: #ae9e8d4e;
+  margin-right: 0%;
+  margin-left: 50%;
+  font-size: larger;
+  padding: 40px;
+  padding-left: 10%;
+  padding-right: 10%;
+  border-radius: 10px;
+  border: 2px solid;
+  border-color: #E4E5E5;
+  box-shadow: 10px 5px 5px #3f3e40;
+  
+}
+
+
+
+.title{
+    padding-top: 2%;
+}
+
+.edit-label{
+  color: #000000;
+font-size: larger;
+}
+
+.text{
+  color: #398c94;
+}
+
+
+input[type=submit] {
+    float: right;
+    background-color: #d6d3c0d9;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-size: 25px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-right: 18%;
+    margin-top: 2%;
+
+  }
+  .edit-button {
+    margin: 0%;
+    margin-left: 5%;
+   margin-top: 1%;
+   background-color: #1C3B3D;
+  }
+
+
+  input[type=submit]:after {
+    background-color: #111;
+    border-radius: 8px;
+    content: "";
+    display: block;
+    height: 48px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(8px, 8px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+  }
+  
+  input[type=submit]:hover:after {
+    transform: translate(0, 0);
+    text-decoration: underline;
+  }
+  
+  input[type=submit]:active {
+    background-color: #D6D3C0;
+    outline: 0;
+  }
+  
+  input[type=submit]:hover {
+    outline: 0;
+    text-decoration: underline;
+    color: #317479;
+  }
+
+  .edit-button:hover {
+    color: #E3E0D3;
+    text-decoration: underline;
+  }
+  
+
+/* 
+  a:visited {
+    color: #31936c;
+  } */
+  @media (min-width: 768px) {
+    input[type=submit] {
+      padding: 0 40px;
+    }
+  }
+ 

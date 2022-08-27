@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.profile {
+  height: 250px; 
+  padding:  2% ;
+  border: 2px solid #E1DCCB;
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  float: left;
+  margin-top:-3%;
+  margin-left:3%;
+}
+
+.aboutpage{
+    margin: auto;
+    width: 90%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    color: #50bfbf;
+    padding-bottom: 20px;
+    padding: 20px;
+    border-radius: 20px;
+}
+.aboutus{
+    font-size: 30px;
+    margin: 20px;
+    font-family: 'Inter';
+    
+}
+
+.bio {
+ font-size: 18px;
+ margin-top:-5%;
+ margin-right:5%;
+ margin-left:40%;
+}
+
+.about-title {
+  font-family: 'Inter';  
+  font-weight: 300;
+    padding: 10px;
+    margin: 20px;
+}
+.name {
+    padding: 2%;
+    margin: auto;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 30px;
+    color:#50bfbf;
+}
+.border{
+     padding: 2%;
+}
+ .year {
+    text-align: center;
+ }
+
+.box{
+  font-family: 'Inter';
+  background-color: #86d0c24a;
+  border: 2px solid;
+  margin:auto;
+  padding-bottom: 20px;
+  border-radius: 10px;
+}
+
+ hr {
+     border: #0c4b18a5 .5px solid;
+
+ }
+ .links{
+    margin-top:4%;
+ }
+ .github{
+  
+   padding-left: 2%;
+   padding-right: 2%;
+ }
+
+.appbio {
+ margin: 20px;
+ margin-right: 20px;
+}
+
+.github :hover{
+    color: #ffffff;
+  box-shadow: 0 15px 15px #1E3C3D;
+}
