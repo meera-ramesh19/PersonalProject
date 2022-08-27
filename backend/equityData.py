@@ -69,5 +69,5 @@ def get_historical_data(num_companies):
 # def write_to_database():
 df = pd.concat(get_historical_data(10))
 print(df)
-engine = create_engine('postgresql://postgres@localhost:5432/equity_data')
+engine = create_engine('postgresql://postgres@localhost:5432/d6sruls945nt9o')
 df.to_sql('historical_data', engine, if_exists='replace')
