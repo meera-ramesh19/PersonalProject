@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "engines": {
     "node": "17.2.0"
-
   },
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "db:init": "psql -U postgres -f db/schema.sql",
