@@ -5,6 +5,7 @@ import pandas as pd
 from sqlalchemy import create_engine
 
 def get_equities():
+  
     print("GETTING EQUITIES")
     """Get the url link for the Investing.com US 30 company from https://www.investing.com/equities/ and store it in a list"""
     # go to the general url for the top 30 US companies
@@ -69,5 +70,5 @@ def get_historical_data(num_companies):
 # def write_to_database():
 df = pd.concat(get_historical_data(10))
 print(df)
-engine = create_engine('postgresql://postgres@localhost:5432/equity_data')
+engine = create_engine('postgresql://postgres@localhost:5432/d6f4qhcnqe586t')
 df.to_sql('historical_data', engine, if_exists='replace')
