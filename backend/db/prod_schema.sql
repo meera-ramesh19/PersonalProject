@@ -1,5 +1,5 @@
 
-\c d6sruls945nt9o;
+\c d28noddnmh7f97;
 
 DROP TABLE IF EXISTS stocks;
 CREATE TABLE stocks(
@@ -14,8 +14,8 @@ CREATE TABLE stocks(
  CREATE TABLE users (
    id SERIAL PRIMARY KEY,
    username TEXT NOT NULL,
-   email TEXT NOT NULL
-   hash_password TEXT NOT NULL,
+   email TEXT NOT NULL,
+   hash_password TEXT NOT NULL
 --     -- hash_password BYTEA,
 --     cash NUMERIC(1000,2)
  );

@@ -22,8 +22,8 @@ CREATE TABLE stocks(
  CREATE TABLE users (
    id SERIAL PRIMARY KEY,
    username TEXT NOT NULL,
-   email TEXT NOT NULL
-   hash_password TEXT NOT NULL,
+   email TEXT NOT NULL,
+   hash_password TEXT NOT NULL
 --     -- hash_password BYTEA,
 --     cash NUMERIC(1000,2)
  );
