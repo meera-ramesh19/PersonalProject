@@ -1,4 +1,4 @@
-\c d6f4qhcnqe586t;
+\c d5lnc39e4vsj00;
 
 INSERT INTO stocks (chart_name, equity_name, metrics,users) VALUES
 ('Chart1','Boeing Co','Price','test'),
