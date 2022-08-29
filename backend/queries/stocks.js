@@ -1,5 +1,14 @@
 const db = require('../db/dbConfig.js');
-// const confirmHealth = require('../confirmHealth');
+
+
+const getAllEquities = async () =>{
+  try {
+    const allEquities = await db.any('SELECT DISTINCT equity FROM historical_data');
+    return allEquities;
+  } catch (error) {
+    return error;
+  }
+};
 
 const getAllStocks = async () => {
   try {
@@ -54,6 +63,7 @@ const deleteStock = async (id) => {
 };
 
 module.exports = {
+  getAllEquities,
   getAllStocks,
   getAStock,
   createStock,
