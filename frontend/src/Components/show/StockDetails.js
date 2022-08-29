@@ -39,10 +39,19 @@ const StockDetails=() =>{
         
         <div className='show-info'>
         <h2 className='show_p'>
+        <span>Metrics: </span> {stock.id}
+      </h2>
+      {/* <h2 className='show_p'>
+        <span> Chart Name: </span> {stock.chart_name}
+      </h2> */}
+        <h2 className='show_p'>
         <span> Equity Name: </span> {stock.equity_name}
       </h2>
       <h2 className='show_p'>
         <span>Metrics: </span> {stock.metrics}
+      </h2>
+      <h2 className='show_p'>
+        <span>Users: </span> {stock.users}
       </h2>
   
       </div>

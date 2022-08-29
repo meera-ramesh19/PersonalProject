@@ -10,7 +10,8 @@ export default function EditChart() {
   const [stock, setStock] = useState({
     chart_name:'',
     equity_name:'',
-    metrics:''
+    metrics:'',
+    users:''
   });
 
   const updateStock = (updated_Stock) => {
