@@ -9,7 +9,6 @@
 
 DROP TABLE IF EXISTS stocks;
 
-
 CREATE TABLE stocks(
    id SERIAL PRIMARY KEY,
    chart_name TEXT NOT NULL,
