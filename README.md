@@ -4,7 +4,12 @@ This is a Personal stock dashboard.
 
 ## Important Links
 
--[Deplayed API server]() -[Deplayed Frontend]() -[Trello Board]() -[ERD](https://miro.com/app/board/uXjVPdchovw=/) -[Wireframe](https://wireframe.cc/VCDK4j) -[TrelloBoard](https://trello.com/b/Rh68ZBTL/stock-info)
+-[Deplayed API server]() 
+-[Deplayed Frontend]() 
+-[Trello Board]() 
+-[ERD](https://miro.com/app/board/uXjVPdchovw=/) 
+-[Wireframe](https://wireframe.cc/VCDK4j) 
+-[TrelloBoard](https://trello.com/b/Rh68ZBTL/stock-info)
 
 ## Local Setup
 

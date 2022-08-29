@@ -1,9 +1,10 @@
 // DEPENDENCIES
+require('dotenv').config();
 const app = require('./app.js');
 
 // CONFIGURATION
-require('dotenv').config();
-const PORT = process.env.PORT || PORT;
+
+const PORT = process.env.PORT || 3013;
 
 // LISTEN
 app.listen(PORT, () => {

@@ -44,7 +44,7 @@ const StockDetails=() =>{
       {/* <h2 className='show_p'>
         <span> Chart Name: </span> {stock.chart_name}
       </h2> */}
-        <h2 className='show_p'>
+      <h2 className='show_p'>
         <span> Equity Name: </span> {stock.equity_name}
       </h2>
       <h2 className='show_p'>
