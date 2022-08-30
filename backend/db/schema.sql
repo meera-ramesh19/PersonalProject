@@ -7,9 +7,9 @@
 -- Connect 
 \c equity_data; 
 
-DROP TABLE IF EXISTS stocks;
+DROP TABLE IF EXISTS charts;
 
-CREATE TABLE stocks(
+CREATE TABLE charts(
    id SERIAL PRIMARY KEY,
    chart_name TEXT NOT NULL,
    equity_name TEXT NOT NULL,

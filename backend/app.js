@@ -3,7 +3,7 @@
 
 const express = require('express');
 const cors = require('cors');
-const stockController = require('./controllers/stockController');
+const chartController = require('./controllers/chartController');
 const equitiesController = require('./controllers/equitiesController');
 
 // CONFIGURATION
@@ -14,10 +14,10 @@ app.use(express.json());
 app.use(cors());
 
 // ROUTES
-app.use('/stocks', stockController);
+app.use('/charts', chartController);
 app.use('/equities', equitiesController);
 app.use('/', (req, res) => {
-  res.send("Welcome to Stock tracker Dashboard");
+  res.send("Welcome to tracker Dashboard");
 }); //look for the basic route in stockController
 
 app.get('*', (req, res) => {
