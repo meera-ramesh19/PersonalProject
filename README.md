@@ -40,7 +40,7 @@ The repo is to learn uses scraped data to create perform crud operation with equ
 
 ## Lessons Learnt
 
-- scraping a website can be done in nodejs using request,axios and cheerio. 
+- scraping a website can be done in nodejs using request,axios and cheerio.
 
 - Some websites use wesockets so cheerio did not work as expected and I had no understanding of it.
   Due to time limitations I had to go the obvious choice.
@@ -49,17 +49,17 @@ The repo is to learn uses scraped data to create perform crud operation with equ
 
 - Python needs indentation and is not forgiving
 
-- Heroku addons are really easy to attach to more than one app. Figuring out for the first time 
-  was harder. 
+- Heroku addons are really easy to attach to more than one app. Figuring out for the first time
+  was harder.
 
-- Tried to incorporate python module in the nodejs but I could not deploy on the backend and encountered so many errors. The solution was to make another repo for python and create a virtual environment 
+- Tried to incorporate python module in the nodejs but I could not deploy on the backend and encountered so many errors. The solution was to make another repo for python and create a virtual environment
 
 - Need a `requirements.txt` for heroku deployment which contains all the modules used in the program. The command `pip freeze > requirements.txt` does the job without the need to add manually.
 
 - I did not create a virtual environment for Python thinking that I do not need as I had one
   python module which was a big mistake
 
-- A little different setup steps for nodejs and python during heroku deployment but finally got 
+- A little different setup steps for nodejs and python during heroku deployment but finally got
   it to deploy with a little googling and devcenter.
 
 ## Local Setup
@@ -68,15 +68,15 @@ The repo is to learn uses scraped data to create perform crud operation with equ
 
 - LocalVersion
 
-- [Backend for Nodeapp to do CRUD ](https://localhost:<your_port_number>/charts)
+- Backend routes
 
-- [Backend route for Nodeapp to access company name ](https://localhost:<your_port_number>/equities)
+  https://localhost:<your_port_number>/charts
+
+- https://localhost:<your_port_number>/equities
 
 ### Frontend Setup
 
 ---
-
-
 
 # PERN Final Project Template
 
