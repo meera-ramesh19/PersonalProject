@@ -1,16 +1,44 @@
 const db = require('../db/dbConfig.js');
 
-const getAllEquities = async () => {
+const getEquityNames = async () => {
   try {
-    const allEquities = await db.any(
+    const equityNames = await db.any(
       'SELECT DISTINCT equity FROM historical_data'
     );
-    return allEquities;
+    return equityNames;
   } catch (error) {
     return error;
   }
 };
 
+const getAllEquities = async () => {
+  try {
+    const allEquities = await db.any('SELECT * FROM historical_data');
+    console.log(allEquities);
+    return allEquities;
+  } catch (error) {
+    console.log(error.message);
+    return error;
+  }
+};
+
+const getChartData = async () => {
+  try {
+  
+    // if metric is price: 
+    // const chartData = await db.any(
+    //   'SELECT date, price FROM charts RIGHT JOIN historical_data ON charts.equity_name = historical_data.equity'
+    // );
+    // if metric is open:
+    const chartData = await db.any(
+      'SELECT * FROM charts RIGHT JOIN historical_data ON charts.equity_name = historical_data.equity'
+    );
+    console.log(chartData)
+    return chartData;
+  } catch (error) {
+    return error;
+  }
+};
 const getAllCharts = async () => {
   try {
     const allCharts = await db.any('SELECT * FROM charts');
@@ -62,7 +90,9 @@ const deleteChart = async (id) => {
 };
 
 module.exports = {
+  getEquityNames,
   getAllEquities,
+  getChartData,
   getAllCharts,
   getAChart,
   createChart,

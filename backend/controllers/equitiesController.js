@@ -4,9 +4,27 @@ const express = require('express');
 const equities = express.Router();
 //import db
 const db = require('../db/dbConfig');
-const { getAllEquities } = require('../queries/charts');
+const { getEquityNames, getAllEquities } = require('../queries/charts');
 
-//New
+//Names
+equities.get('/names', async (req, res) => {
+  console.log('get names /');
+
+  const equityNames = await getEquityNames();
+  console.log(equityNames);
+  if (equityNames[0]) {
+    res.status(200).json({
+      success: true,
+      payload: [equityNames],
+    });
+  } else {
+    res.status(500).json({
+      error: 'server error',
+    });
+  }
+});
+
+//Index
 equities.get('/', async (req, res) => {
   console.log('get all /');
 
@@ -15,7 +33,7 @@ equities.get('/', async (req, res) => {
   if (allEquities[0]) {
     res.status(200).json({
       success: true,
-      payload: [allEquities],
+      payload: allEquities,
     });
   } else {
     res.status(500).json({

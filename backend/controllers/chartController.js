@@ -7,6 +7,7 @@ const db = require('../db/dbConfig');
 //import validation
 const {
   getAllCharts,
+  getChartData,
   getAChart,
   createChart,
   updateChart,
@@ -39,6 +40,23 @@ charts.get('/', async (req, res) => {
     });
   }
 });
+
+//ChartInfo
+charts.get('/data', async (req, res) => {
+  const chartData = await getChartData();
+  console.log(chartData);
+  if (chartData[0]) {
+    res.status(200).json({
+      success: true,
+      payload: chartData,
+    });
+  } else {
+    res.status(500).json({
+      error: 'server error',
+    });
+  }
+});
+//
 
 //Show
 charts.get('/:id', async (req, res) => {
