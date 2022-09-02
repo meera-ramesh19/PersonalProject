@@ -33,7 +33,18 @@ function ZoomableLineChart(props) {
   const wrapperRef = useRef();
   const dimensions = useResizeObserver(wrapperRef);
   const [currentZoomState, setCurrentZoomState] = useState();
-  console.log(min(data), max(data));
+  console.log('minmax', min(data), max(data));
+
+  const minData = min(data);
+  const maxData = max(data);
+  const yDomainMin = minData - 1;
+  const yDomainMax = Math.round(maxData) + 1.0;
+  console.log('datalength', data.length);
+  console.log('domain', yDomainMin, yDomainMax);
+
+  const box_height = 600;
+  const box_width = 600;
+
   // will be called initially and on every data change
   useEffect(() => {
     const svg = select(svgRef.current);
@@ -47,14 +58,18 @@ function ZoomableLineChart(props) {
 
     console.log('data', data);
     // scales + line generator
-    const xScale = scaleLinear().domain([3, data.length]).range([50, 450]);
+    const xScale = scaleLinear()
+      .domain([2, data.length + 5])
+      .range([50, box_width]);
 
     if (currentZoomState) {
       const newXScale = currentZoomState.rescaleX(xScale);
       xScale.domain(newXScale.domain());
     }
 
-    const yScale = scaleLinear().domain([0, 400]).range([395, 5]);
+    const yScale = scaleLinear()
+      .domain([yDomainMin, yDomainMax])
+      .range([box_height - 5, 10]);
 
     const lineGenerator = line()
       .x((d, index) => xScale(index))
@@ -88,9 +103,9 @@ function ZoomableLineChart(props) {
       .tickFormat((index) => index - 2);
     const yAxis = axisLeft(yScale);
 
-    svg.select('.x-axis').attr('transform', 'translate(-50, 420)').call(xAxis);
+    svg.select('.x-axis').attr('transform', 'translate(-50, 600)').call(xAxis);
 
-    svg.select('.y-axis').style('transform', 'translate(-2px)').call(yAxis);
+    svg.select('.y-axis').attr('transform', 'translate(-3, 0)').call(yAxis);
 
     // zoom
     const zoomBehavior = zoom()
@@ -110,7 +125,11 @@ function ZoomableLineChart(props) {
   return (
     <React.Fragment>
       <div ref={wrapperRef} style={{ marginBottom: '2rem' }}>
-        <svg ref={svgRef} viewBox={`0 0 400 400`}>
+        <svg
+          ref={svgRef}
+          preserveAspectRatio='xMinYMin meet'
+          viewBox={`0 0 550 600`}
+        >
           <defs>
             <clipPath id={name}>
               <rect x='0' y='0' width='100%' height='100%' />

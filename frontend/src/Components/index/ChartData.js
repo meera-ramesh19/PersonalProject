@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 import axios from 'axios';
 import ZoomableLineChart from './ZoomableLineChart';
-import LineChart from './LineChart.js';
+// import LineChart from './LineChart.js';
 import '../../styles/show.css'
 const API = process.env.REACT_APP_API_URL;
 
