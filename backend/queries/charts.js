@@ -2,9 +2,7 @@ const db = require('../db/dbConfig.js');
 
 const getEquityNames = async () => {
   try {
-    const equityNames = await db.any(
-      'SELECT DISTINCT equity FROM historical_data'
-    );
+    const equityNames = await db.any(query);
     return equityNames;
   } catch (error) {
     return error;
@@ -50,9 +48,8 @@ const getChartData = async (equity, chart, metrics) => {
       high_arr.push(chartData[i].High);
       open_arr.push(chartData[i].Open);
       low_arr.push(chartData[i].Low);
-
     }
-    console.log('dateArrr=',date_arr)
+    console.log('dateArrr=', date_arr);
     if (metric === 'price') {
       metric_vals = price_arr;
     } else if (metric === 'open') {
