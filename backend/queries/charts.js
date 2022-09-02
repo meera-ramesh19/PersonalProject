@@ -2,7 +2,9 @@ const db = require('../db/dbConfig.js');
 
 const getEquityNames = async () => {
   try {
-    const equityNames = await db.any(query);
+    const equityNames = await db.any(
+      'SELECT DISTINCT equity from historical_data'
+    );
     return equityNames;
   } catch (error) {
     return error;
@@ -33,15 +35,16 @@ const getChartData = async (equity, chart, metrics) => {
       "' ORDER BY historical_data.date ASC";
 
     chartData = await db.any(url_string);
-
-    price_arr = [];
-    open_arr = [];
-    low_arr = [];
-    high_arr = [];
-    date_arr = [];
-    metric_vals = [];
-
-    metric = chartData[0].metrics.toString().toLowerCase();
+    console.log('inside charts.js chartData', chartData);
+    const price_arr = [];
+    const open_arr = [];
+    const low_arr = [];
+    const high_arr = [];
+    const date_arr = [];
+    let metric_vals = [];
+   
+    const metric = chartData[0].metrics.toString().toLowerCase();
+    console.log('in side charts.js metric', metric);
     for (let i = 0; i < chartData.length; i++) {
       date_arr.push(chartData[i].date);
       price_arr.push(chartData[i].Price);
@@ -49,15 +52,15 @@ const getChartData = async (equity, chart, metrics) => {
       open_arr.push(chartData[i].Open);
       low_arr.push(chartData[i].Low);
     }
-    console.log('dateArrr=', date_arr);
+
     if (metric === 'price') {
       metric_vals = price_arr;
     } else if (metric === 'open') {
       metric_vals = open_arr;
     } else if (metric === 'high') {
-      metrics_vals = high_arr;
+      metric_vals = high_arr;
     } else if (metric === 'low') {
-      metrics_vals = low_arr;
+      metric_vals = low_arr;
     }
 
     if (chartData.length > 0) {

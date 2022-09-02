@@ -46,10 +46,10 @@ charts.get('/data', async (req, res) => {
   const equity = req.query.equity_name;
   const chart = req.query.chart_name;
   const metrics = req.query.metrics;
-  //  console.log('in controller=', equity, chart, metrics);
+  console.log('in controller=', equity, chart, metrics);
 
   const chartData = await getChartData(equity, chart, metrics);
-  console.log(chartData)
+  // console.log('data obtainer',chartData)
   if (chartData) {
     res.status(200).json({
       success: true,
