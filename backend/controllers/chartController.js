@@ -43,9 +43,14 @@ charts.get('/', async (req, res) => {
 
 //ChartInfo
 charts.get('/data', async (req, res) => {
-  const chartData = await getChartData();
-  console.log(chartData);
-  if (chartData[0]) {
+  const equity = req.query.equity_name;
+  const chart = req.query.chart_name;
+  const metrics = req.query.metrics;
+  //  console.log('in controller=', equity, chart, metrics);
+
+  const chartData = await getChartData(equity, chart, metrics);
+  console.log(chartData)
+  if (chartData) {
     res.status(200).json({
       success: true,
       payload: chartData,
@@ -56,7 +61,6 @@ charts.get('/data', async (req, res) => {
     });
   }
 });
-//
 
 //Show
 charts.get('/:id', async (req, res) => {

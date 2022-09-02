@@ -1,4 +1,4 @@
-import StockDetails from '../Components/show/StockDetails';
+import ChartDetails from '../Components/show/ChartDetails';
 import { motion } from 'framer-motion';
 // import '../styles/show.css';
 
@@ -11,7 +11,7 @@ export default function Show() {
       style={{  height: '100vh' }}
     >
       <h2 style={{ textAlign: 'center' }}>New Transaction</h2>
-      <StockDetails />
+      <ChartDetails />
     </motion.div>
   );
 }

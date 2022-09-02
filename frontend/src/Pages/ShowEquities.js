@@ -1,8 +1,8 @@
-import EditChart from '../Components/edit/EditChart';
+import EquityNames from '../Components/equity/EquityNames';
 import { motion } from 'framer-motion';
 // import '../styles/edit.css';
 
-const Edit = () => {
+const ShowEquity = () => {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.5 }}
@@ -15,9 +15,9 @@ const Edit = () => {
       }}
     >
       <h2>Edit</h2>
-      <EditChart />
+      <EquityNames />
     </motion.div>
   );
 };
 
-export default Edit;
+export default ShowEquity;

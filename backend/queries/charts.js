@@ -22,18 +22,62 @@ const getAllEquities = async () => {
   }
 };
 
-const getChartData = async () => {
+const getChartData = async (equity, chart, metrics) => {
+  let chartData;
   try {
-  
-    // if metric is price: 
-    // const chartData = await db.any(
-    //   'SELECT date, price FROM charts RIGHT JOIN historical_data ON charts.equity_name = historical_data.equity'
-    // );
-    // if metric is open:
-    const chartData = await db.any(
-      'SELECT * FROM charts RIGHT JOIN historical_data ON charts.equity_name = historical_data.equity'
-    );
-    console.log(chartData)
+    let eq = equity.toLowerCase();
+    let char = chart.toLowerCase();
+    url_string =
+      "SELECT * from charts JOIN historical_data ON LOWER(REPLACE(charts.equity_name, ' ', '')) = LOWER(REPLACE(historical_data.equity, ' ', '')) WHERE LOWER(REPLACE(charts.chart_name, ' ', '')) = '" +
+      char +
+      "' AND LOWER(REPLACE(historical_data.equity, ' ', '')) = '" +
+      eq +
+      "' ORDER BY historical_data.date ASC";
+
+    chartData = await db.any(url_string);
+
+    price_arr = [];
+    open_arr = [];
+    low_arr = [];
+    high_arr = [];
+    date_arr = [];
+    metric_vals = [];
+
+    metric = chartData[0].metrics.toString().toLowerCase();
+    for (let i = 0; i < chartData.length; i++) {
+      date_arr.push(chartData[i].date);
+      price_arr.push(chartData[i].Price);
+      high_arr.push(chartData[i].High);
+      open_arr.push(chartData[i].Open);
+      low_arr.push(chartData[i].Low);
+
+    }
+    console.log('dateArrr=',date_arr)
+    if (metric === 'price') {
+      metric_vals = price_arr;
+    } else if (metric === 'open') {
+      metric_vals = open_arr;
+    } else if (metric === 'high') {
+      metrics_vals = high_arr;
+    } else if (metric === 'low') {
+      metrics_vals = low_arr;
+    }
+
+    if (chartData.length > 0) {
+      let final_data = {
+        chart_name: chartData[0].chart_name,
+        equity_name: chartData[0].equity_name,
+        metric: metric,
+        price: price_arr,
+        high: high_arr,
+        low: low_arr,
+        open: open_arr,
+        dates: date_arr,
+        base_metric: metric_vals,
+      };
+      return final_data;
+    }
+
     return chartData;
   } catch (error) {
     return error;

@@ -13,7 +13,7 @@ export default function App() {
         <NavBar />
         <TagLine/>
         <AnimatedRoutes />
-        <Footer /> 
+        {/* <Footer />  */}
       </Router>
     </div>
   );

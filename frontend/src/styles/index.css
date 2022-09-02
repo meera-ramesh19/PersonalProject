@@ -1,6 +1,5 @@
-
-
-.snack-card{ 
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+/* .charts-card{ 
     display: flex;
     flex-wrap: wrap;
     margin: auto;
@@ -11,96 +10,120 @@
     border-radius: 10px;
     padding: 10px; 
     margin: 10px;  
-}
+}  */
 
-
-.snack-name{
-   display: flex;
-   flex-wrap: wrap;
-    font-size: 22px;
-    font-weight: 900;
-    inline-size: 150px;
-    padding-top: 10px;
-    padding-left: 20px;
-    color: #50bfbf;
-    font-family: 'Italiana', serif;
-    position: relative;
+.charts-name {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 22px;
+  font-weight: 900;
+  inline-size: 1000px;
+  padding-top: 10px;
+  padding-left: 20px;
+  color: #50bfbf;
+  font-family: 'Italiana', serif;
+  /* position: relative;
     left: 35px; 
-    top: 7px;
-    
+    top: 7px; */
 }
-.snack-name:hover{
-       color: #E1DDC9;
-
+.charts-name:hover {
+  color: #e1ddc9;
 }
 
-.stock-pic{
-    margin: auto;
-    border-radius: 10px;
-    box-shadow: 5px 10px #888888;
-    border: 2px solid ;
-    position: relative;
-    left: 35px; 
-    top: 15px;
-       
+.stock-pic {
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 5px 10px #888888;
+  border: 2px solid;
+  position: relative;
+  left: 35px;
+  top: 15px;
 }
 
- .stock-pic:hover{
-   
-    animation: snack-pic 2s ease infinite;
+.stock-pic:hover {
+  animation: snack-pic 2s ease infinite;
 }
 
 @keyframes stock-pic {
-    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-    40% {transform: translateY(-30px);}
-    60% {transform: translateY(-15px);}
-}
-    
-
-div.health{
-    margin-top: 70%;
-   margin-right: 10px;
-    margin-bottom: 10px;
-  
-    width:70px;
-    transform: scale(0.6);
-    position: relative;
-    right: 20%;
-    top: 10px;
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }
 
 
 .all-stocks {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 2%;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2%;
+  justify-content: center;
+}
+
+h1 {
+  font-family: 'Inter';
+  text-align: center;
+  font-size: 3rem;
+  color:black;
+}
+
+.back-button {
+  margin: auto;
+  margin-bottom: 2%;
+}
+
+.charts {
+  /* background-color: #888888; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 90%;
+  max-width: 100%;
+  margin: auto;
+  border-radius: 10px;
+  padding-bottom: 10px;
+}
+.title-charts {
+  padding: 2%;
+  color: #111;
+  font-size:2rem;
+}
+tr.green th {
+  background: green;
+  color: white;
+  border: 1px solid black;
+}
+/* table {
+    width: 50%;
+    margin: auto;
     
+  } */
+.table-container {
+  overflow: auto;
+  max-height: auto;
+  border: 1px solid black;
+  margin: 0 auto;
 }
 
-h1{
-    font-family: 'Fredericka the Great', cursive;
-    text-align: center;
-    font-size: 70px;
+th {
+  position: sticky;
+  top: 0;
+  background: white;
+}
+td {
+  text-align: center;
+  padding: 0.5rem;
+  border: 1px solid black;
 }
 
-
-.back-button{
-    margin: auto;
-    margin-bottom: 2%;
+tbody td:not(td:first-of-type):hover {
+  transform: scale(1.05);
+  opacity: 0.9;
 }
-
-.stocks {
-   background-color: #888888;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 90%;
-    margin: auto;
-    border-radius: 10px;
-    padding-bottom: 10px;
-}
-.title-stocks{
-    padding: 2%;
-    color: #E1DDCA;
-}
-

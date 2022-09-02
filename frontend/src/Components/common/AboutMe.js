@@ -5,12 +5,6 @@ import './about.css';
 export default function AboutMe() {
   return (
     <div className='aboutpage'>
-      {/* <div>
-        <h1 className="about-title">About the App.</h1>
-        <article className="appbio">
-          <span className="big">Hello,</span> 
-        </article>
-      </div> */}
       <hr></hr>
       <br />
 

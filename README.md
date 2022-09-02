@@ -56,11 +56,13 @@ The repo is to learn uses scraped data to create perform crud operation with equ
 
 - Need a `requirements.txt` for heroku deployment which contains all the modules used in the program. The command `pip freeze > requirements.txt` does the job without the need to add manually.
 
-- I did not create a virtual environment for Python thinking that I do not need as I had one
-  python module which was a big mistake
-
 - A little different setup steps for nodejs and python during heroku deployment but finally got
   it to deploy with a little googling and devcenter.
+
+- Need to scale the dynos using heroku ps:scale web=1 which will start the app. By mistake, when I  
+  scaled it 0 my app crashed and there was error H14
+
+- Postgres column names are case sensitive
 
 ## Local Setup
 
@@ -70,7 +72,7 @@ The repo is to learn uses scraped data to create perform crud operation with equ
 
 - Backend routes
 
-  https://localhost:<your_port_number>/charts
+- https://localhost:<your_port_number>/charts
 
 - https://localhost:<your_port_number>/equities
 

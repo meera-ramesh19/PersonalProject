@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
-import  WixLogo from '../../assets/WixLogo.jpeg';
+import WixLogo from '../../assets/WixLogo.jpeg';
 import './navbar.css';
 
 //https://www.crazyegg.com/blog/color-palettes-financial/ for colors
@@ -18,11 +18,13 @@ export default function NavBar() {
     setOpen(false);
   };
   return (
-    
     <nav className='navbar sticky'>
       <Link to='/' className='nav-logo'>
-    
-      <img src={WixLogo} alt='logo' style={{width:'50px', height:'50px'}}/>
+        <img
+          src={WixLogo}
+          alt='logo'
+          style={{ width: '50px', height: '50px' }}
+        />
       </Link>
       <div onClick={handleClick} className='nav-icon'>
         {open ? <FiX /> : <FiMenu />}
@@ -39,13 +41,23 @@ export default function NavBar() {
           </Link>
         </li>
         <li className='nav-item'>
-          <Link to='/stocks' className='nav-link' onClick={closeMenu}>
-            Stocks
+          <Link to='/charts' className='nav-link' onClick={closeMenu}>
+            Charts
           </Link>
         </li>
         <li className='nav-item'>
-          <Link to='/stocks/new' className='nav-link' onClick={closeMenu}>
+          <Link to='/charts/new' className='nav-link' onClick={closeMenu}>
             New
+          </Link>
+        </li>
+        <li className='nav-item'>
+          <Link to='/equities/' className='nav-link' onClick={closeMenu}>
+            Equities
+          </Link>
+        </li>
+        <li className='nav-item'>
+          <Link to='/equities/names' className='nav-link' onClick={closeMenu}>
+            Equity Names
           </Link>
         </li>
       </ul>

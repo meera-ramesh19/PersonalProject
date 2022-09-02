@@ -1,4 +1,4 @@
-import NewStock from '../Components/new/NewStock';
+import NewChart from '../Components/new/NewChart';
 import { motion } from 'framer-motion';
 import '../styles/new.css';
 
@@ -11,7 +11,7 @@ const New = () => {
       style={{ height: '100vh' }}
     >
       <h2 style={{ textAlign: 'center' }}>New Stocks</h2>
-      <NewStock />
+      <NewChart/>
     </motion.div>
   );
 };

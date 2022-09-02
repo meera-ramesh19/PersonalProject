@@ -17,7 +17,7 @@ const Home = () => {
       }}
     >
       {/* <h2>Home</h2> */}
-      <h1 style={{color: '#786d78',fontFamily:'serif',fontSize:'2rem'}}> Welcome to Stocks Dashboard</h1>
+      <h1 style={{color: '#786d78',fontFamily:'serif',fontSize:'2rem'}}> Welcome to Charts Dashboard</h1>
     </motion.div>
   );
 };
