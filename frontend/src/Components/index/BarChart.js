@@ -53,7 +53,6 @@ function BarChart(props) {
   const yDomainMin = minData;
   const yDomainMax = maxData;
 
-  
   // will be called initially and on every data change
   useEffect(() => {
     const svg = select(svgRef.current);

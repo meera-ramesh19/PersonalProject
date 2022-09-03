@@ -18,7 +18,6 @@ const ChartData = () => {
 
   const [chartInfo, setChartInfo] = useState([]);
   let { id } = useParams();
- 
 
   const metric = searchParams.getAll('metrics');
   const equityName = searchParams.getAll('equity_name');
@@ -90,11 +89,7 @@ const ChartData = () => {
     } else {
       console.log('hit nothing');
     }
-
-    
   };
-
- 
 
   return (
     <div className='show'>
@@ -112,8 +107,7 @@ const ChartData = () => {
         <h2 className='show_p'>
           <span> Equity Name: </span> {chartInfo.equity_name}
         </h2>
-        
-      
+
         <ZoomableLineChart
           metric={metricInfo}
           price={priceInfo}
@@ -124,12 +118,13 @@ const ChartData = () => {
           base_metric={defaultData}
           date={dateInfo}
         />
-        </div>
-      
-        <button className='toggle' onClick={() => toggleValues(metricInfo)}>Toggle Metrics</button>
-       
+      </div>
 
-        <div className='bars'>
+      <button className='toggle' onClick={() => toggleValues(metricInfo)}>
+        Toggle Metrics
+      </button>
+
+      <div className='bars'>
         <BarChart
           data={defaultData}
           metric={metricInfo}
@@ -138,17 +133,14 @@ const ChartData = () => {
           high={highInfo}
           low={lowInfo}
         />
-        </div>
-      
-       <div className='showNavigation'>
-          <Link to={`/charts`} style={{margin:'0 auto'}}>
-            <button className='show_button'>Back</button>
-          </Link>
-        
-       </div>
-        
       </div>
-    
+
+      <div className='showNavigation'>
+        <Link to={`/charts`} style={{ margin: '0 auto' }}>
+          <button className='show_button'>Back</button>
+        </Link>
+      </div>
+    </div>
   );
 };
 
