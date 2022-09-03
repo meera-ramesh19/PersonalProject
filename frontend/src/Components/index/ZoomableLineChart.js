@@ -27,8 +27,8 @@ function ZoomableLineChart(props) {
   const data = props.base_metric;
   const date = props.date;
 
-  const [height, setHeight] = useState([]);
-  const [width, setWidth] = useState([]);
+  // const [height, setHeight] = useState([]);
+  // const [width, setWidth] = useState([]);
   const svgRef = useRef();
   const wrapperRef = useRef();
   const dimensions = useResizeObserver(wrapperRef);
@@ -53,8 +53,8 @@ function ZoomableLineChart(props) {
     const { width, height } =
       dimensions || wrapperRef.current.getBoundingClientRect();
 
-    setHeight(height);
-    setWidth(width);
+    // setHeight(height);
+    // setWidth(width);
 
     console.log('data', data);
     // scales + line generator
@@ -95,7 +95,27 @@ function ZoomableLineChart(props) {
       .attr('r', 4)
       .attr('fill', 'orange')
       .attr('cx', (value, index) => xScale(index))
-      .attr('cy', yScale);
+      .attr('cy', yScale)
+      .on('mouseenter', (event, value) => {
+        // events have changed in d3 v6:
+        // https://observablehq.com/@d3/d3v6-migration-guide#events
+        const index = svg.selectAll('.myDot').nodes().indexOf(event.target);
+        svg
+          .selectAll('.tooltip')
+          .data([value])
+          .join((enter) => enter.append('text').attr('y', yScale(value) - 4))
+          .attr('class', 'tooltip')
+          .text(value)
+          .attr('x', xScale(index))
+          .attr('text-anchor', 'end')
+          .transition()
+          .attr('y', yScale(value))
+          .attr('opacity', 1);
+      })
+      .on('mouseleave', () => svg.select('.tooltip').remove())
+      .transition()
+      // .attr('fill', '')
+      .attr('height', (value) => 150 - yScale(value));
 
     // axes
     const xAxis = axisBottom(xScale)

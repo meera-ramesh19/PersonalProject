@@ -1,18 +1,8 @@
 svg {
-  background: #eee;
   overflow: visible;
   display: block;
   width: 100%;
 }
-
-/* #root {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: center;
-    height: 100vh;
-    padding: 0 50px;
-  } */
 
 button {
   width: 100px;

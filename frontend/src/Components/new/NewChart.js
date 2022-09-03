@@ -26,9 +26,8 @@ const NewChart = () => {
 
   useEffect(() => {
     axios.get(`${API}/equities/names`).then((res) => {
-      console.log(res.data.payload)
+      console.log('payload name', res.data.payload);
       setEquities(res.data.payload);
-     
     });
   }, []);
 
@@ -83,8 +82,8 @@ const NewChart = () => {
 
             {equities[0]?.map((ele, index) => {
               return (
-                <option key={index} value={ele.equity}>
-                  {ele.equity}
+                <option key={index} value={ele.equity.split(' ').join('')}>
+                  {ele.equity.split(' ').join('')}
                 </option>
               );
             })}
@@ -121,8 +120,8 @@ const NewChart = () => {
               -- Select an option --{' '}
             </option>
             {metricValue.map((metric, index) => (
-              <option key={index} value={metric.value}>
-                {metric.label}
+              <option key={index} value={metric.value.toLowerCase()}>
+                {metric.label.toLowerCase()}
               </option>
             ))}
           </select>

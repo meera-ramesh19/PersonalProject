@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import './Line.css';
+
 import { select, line, curveCardinal } from 'd3';
 import BarChart from './BarChart';
 import ZoomableLineChart from './ZoomableLineChart';

@@ -7,8 +7,8 @@ import {
 } from 'react-router-dom';
 import axios from 'axios';
 import ZoomableLineChart from './ZoomableLineChart';
-// import LineChart from './LineChart.js';
-import '../../styles/show.css'
+import BarChart from './BarChart';
+import '../../styles/show.css';
 const API = process.env.REACT_APP_API_URL;
 
 const ChartData = () => {
@@ -18,17 +18,7 @@ const ChartData = () => {
 
   const [chartInfo, setChartInfo] = useState([]);
   let { id } = useParams();
-  // axios.get(
-  //   `${API}/charts/data?metrics=${metric}&equity=${equityName}
-  //   &name=${chartName}`
-  // )
-  // axios.post( '/charts/data',{
-  //     metrics: metric,
-  //     equity : equityName,
-  //     chart_name : chartName
-  // })
-  // ?metrics=${chartInfo.metrics}&equity=${chartInfo.equity}&name={chartInfo.chart_name}
-  // console.log(searchParams, Object.fromEntries([...searchParams]));
+ 
 
   const metric = searchParams.getAll('metrics');
   const equityName = searchParams.getAll('equity_name');
@@ -62,15 +52,17 @@ const ChartData = () => {
         setNameInfo(res.data.payload.chart_name);
         setDefaultData(res.data.payload.base_metric);
         setDateInfo(res.data.payload.dates);
-        console.log(
-          metricInfo,
-          priceInfo,
-          openInfo,
-          highInfo,
-          lowInfo,
-          chartNameInfo,
-          dateInfo
-        );
+        // console.log(
+        //   'inCahrtData',
+        //   metricInfo,
+        //   priceInfo,
+        //   openInfo,
+        //   highInfo,
+        //   lowInfo,
+        //   chartNameInfo,
+        //   dateInfo,
+        //   defaultData
+        // );
       })
       .catch(() => {
         console.log('error');
@@ -78,44 +70,51 @@ const ChartData = () => {
       });
   }, []);
 
-  // const metricArr = chartInfo.metric_vals?.map((ele) => {
-  //   console.log('ele', ele);
-  //   return Math.trunc(ele);
-  // });
-  // console.log('values', metricArr);
+  const toggleValues = (metric) => {
+    console.log('in toggle', metric);
+    if (metric === 'high') {
+      setMetricInfo('low');
+      setDefaultData(lowInfo);
+    } else if (metric === 'low') {
+      console.log('Hit low');
+      setMetricInfo('price');
+      setDefaultData(priceInfo);
+    } else if (metric === 'price') {
+      console.log('Hit price');
+      setMetricInfo('open');
+      setDefaultData(openInfo);
+    } else if (metric === 'open') {
+      console.log('Hit open');
+      setMetricInfo('high');
+      setDefaultData(highInfo);
+    } else {
+      console.log('hit nothing');
+    }
+
+    
+  };
+
+ 
 
   return (
     <div className='show'>
       <h1 className='show-title'>
-        <span>Chart Name:</span>
+        {/* <span>Chart Name:</span> */}
         {chartInfo.chart_name}
       </h1>
 
       <div className='show-info'>
         <h2 className='show_p'>
-          <span> Metric: </span> {chartInfo.metric}
+          {/* <span> Metric: </span> {chartInfo.metric} */}
+          <span> Metric: </span> {metricInfo}
         </h2>
 
         <h2 className='show_p'>
           <span> Equity Name: </span> {chartInfo.equity_name}
         </h2>
-
-        <h2 className='show_p'>
-          <span>Metric Values: </span> {chartInfo.metric_vals}
-        </h2>
-        <h2 className='show_p'>
-          <span>Date: </span> {chartInfo.date}
-        </h2>
-        {/* <LineChart
-          metric={metricInfo}
-          price={priceInfo}
-          open={openInfo}
-          high={highInfo}
-          low={lowInfo}
-          name={chartNameInfo}
-          base_metric={defaultData}
-        /> */}
-          <ZoomableLineChart
+        
+      
+        <ZoomableLineChart
           metric={metricInfo}
           price={priceInfo}
           open={openInfo}
@@ -124,39 +123,32 @@ const ChartData = () => {
           name={chartNameInfo}
           base_metric={defaultData}
           date={dateInfo}
-        /> 
-      </div>
+        />
+        </div>
+      
+        <button className='toggle' onClick={() => toggleValues(metricInfo)}>Toggle Metrics</button>
+       
 
-      {/* <LineChart metric={metricInfo} price={priceInfo} open={openInfo} high={highInfo} low={lowInfo} name={chartNameInfo} /> */}
-
-      {/* <LineChart
-        metric={chartInfo.metric}
-        name={chartInfo.equity_name}
-        vals={chartInfo.metric_vals}
-        date={chartInfo.date}
-      /> */}
-      {/* <LineChart metricArr={metricArr} /> */}
-      {/* /* <LineChart info={chartInfo}  */}
-
-     
-      {/* <div className='showNavigation'>
-        <div>
-          <Link to={`/charts`}>
+        <div className='bars'>
+        <BarChart
+          data={defaultData}
+          metric={metricInfo}
+          price={priceInfo}
+          open={openInfo}
+          high={highInfo}
+          low={lowInfo}
+        />
+        </div>
+      
+       <div className='showNavigation'>
+          <Link to={`/charts`} style={{margin:'0 auto'}}>
             <button className='show_button'>Back</button>
           </Link>
-        </div>
-        <div>
-          <Link to={`/charts/${chart.id}/edit`}>
-            <button className='show_button'>Edit</button>
-          </Link>
-        </div>
-        <div>
-          <button className='show_button' onClick={handleDelete}>
-            Delete
-          </button>
-        </div> 
-      </div>*/}
-    </div>
+        
+       </div>
+        
+      </div>
+    
   );
 };
 

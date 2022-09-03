@@ -1,6 +1,6 @@
 import EquityInfo from '../Components/equity/EquityInfo';
 import { motion } from 'framer-motion';
-// import '../styles/edit.css';
+
 
 const EquityIndex = () => {
   return (

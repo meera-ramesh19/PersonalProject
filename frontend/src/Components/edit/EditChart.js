@@ -4,25 +4,24 @@ import axios from 'axios';
 
 const API = process.env.REACT_APP_API_URL;
 
- const EditChart=() =>{
+const EditChart = () => {
   const navigate = useNavigate();
   let { id } = useParams();
-  const [chart, setChart ]= useState({
-    chart_name:'',
-    equity_name:'',
-    metrics:'',
-    users:''
+  const [chart, setChart] = useState({
+    chart_name: '',
+    equity_name: '',
+    metrics: '',
+    users: '',
   });
 
-  const metricValue=[
-    { label: "High", value: "High" },
-    { label: "Low", value: "Low" },
-    { label: "Open", value: "Open" },
-    { label: "Price", value: "Price" },
-]
+  const metricValue = [
+    { label: 'High', value: 'High' },
+    { label: 'Low', value: 'Low' },
+    { label: 'Open', value: 'Open' },
+    { label: 'Price', value: 'Price' },
+  ];
 
-  
-   const [equity, setEquity] = useState([]);
+  const [equity, setEquity] = useState([]);
   // const [metrics, setMetrics] = useState("⬇️ Select a metric ⬇️")
 
   useEffect(() => {
@@ -30,25 +29,25 @@ const API = process.env.REACT_APP_API_URL;
       setEquity(res.data.payload);
       console.log(equity);
     });
-  },[]);
+  }, []);
 
   const updateChart = (updated_Chart) => {
-    console.log(updated_Chart)
+    console.log(updated_Chart);
     axios
       .put(`${API}/charts/${id}`, updated_Chart)
       .then(
         () => {
           navigate(`/charts/${id}`);
         },
-        (error) => console.error(error),
+        (error) => console.error(error)
       )
       .catch((c) => console.warn('catch', c));
   };
 
   const handleTextChange = (event) => {
-    console.log(event.target.id,event.target.value)
+    console.log(event.target.id, event.target.value);
     setChart({ ...chart, [event.target.id]: event.target.value });
-    console.log(chart)
+    console.log(chart);
   };
 
   useEffect(() => {
@@ -71,15 +70,13 @@ const API = process.env.REACT_APP_API_URL;
   return (
     <div className='edit'>
       <h1 className='title'>Edit Chart Entry</h1>
-     
-      
+
       <form className='form' onSubmit={handleSubmit}>
-      <div className='color2'>
-        
-        <label className='edit-label' htmlFor='equtiy_name'>
-          Equity Name
-        </label>
-       {/* <input
+        <div className='color2'>
+          <label className='edit-label' htmlFor='equtiy_name'>
+            Equity Name
+          </label>
+          {/* <input
           className='text'
           id='equity_name'
           disabled
@@ -102,32 +99,30 @@ const API = process.env.REACT_APP_API_URL;
 
             {equity[0]?.map((ele, index) => {
               return (
-                <option key={index} value={ele.equity}>
-                  {ele.equity}
+                <option key={index} value={ele.equity.split(' ').join('')}>
+                  {ele.equity.split(' ').join('')}
                 </option>
               );
             })}
           </select>
 
-        <label className='edit-label' htmlFor='chart_name'>
-          Chart Name
-        </label>
-        <input
-          className='text'
-          id='chart_name'
-          value={chart.chart_name}
-          type='text'
-          onChange={handleTextChange}
-          placeholder='Name Of chart'
-          required
+          <label className='edit-label' htmlFor='chart_name'>
+            Chart Name
+          </label>
+          <input
+            className='text'
+            id='chart_name'
+            value={chart.chart_name}
+            type='text'
+            onChange={handleTextChange}
+            placeholder='Name Of chart'
+            required
+          />
 
-         
-        />
-        
-        <label className='edit-label' htmlFor='metrics'>
-          Metrics
-        </label>
-        {/* <input
+          <label className='edit-label' htmlFor='metrics'>
+            Metrics
+          </label>
+          {/* <input
           className='text'
           id='metrics'
           value={chart.metrics}
@@ -136,16 +131,21 @@ const API = process.env.REACT_APP_API_URL;
           placeholder='price'
           required
         /> */}
-         <select
+          <select
             onChange={handleTextChange}
             id='metrics'
             name='metrics'
             value={chart.metrics}
-            >
+          >
             <option value='⬇️ Select an option ⬇️'>
-              {' '}-- Select an option --{' '}
+              {' '}
+              -- Select an option --{' '}
             </option>
-            {metricValue.map((metric,index) => <option key={index} value={metric.value}>{metric.label}</option>)}
+            {metricValue.map((metric, index) => (
+              <option key={index} value={metric.value.toLowerCase()}>
+                {metric.label.toLowerCase()}
+              </option>
+            ))}
           </select>
 
           {/* <label className='new-label1' htmlFor='users'>
@@ -161,18 +161,15 @@ const API = process.env.REACT_APP_API_URL;
             placeholder='user name'
             required
           /> */}
-       
-        <input type='submit' />
-       
+
+          <input type='submit' />
         </div>
         <Link to={`/charts/${id}`}>
           <button className='edit-button'>Back</button>
         </Link>
-        
       </form>
-      
     </div>
   );
-}
+};
 
 export default EditChart;

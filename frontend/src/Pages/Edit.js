@@ -14,7 +14,6 @@ const Edit = () => {
         height: '100vh',
       }}
     >
-      <h2>Edit</h2>
       <EditChart />
     </motion.div>
   );

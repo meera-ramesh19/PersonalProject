@@ -14,7 +14,6 @@ const ShowEquity = () => {
         height: '100vh',
       }}
     >
-      <h2>Edit</h2>
       <EquityNames />
     </motion.div>
   );

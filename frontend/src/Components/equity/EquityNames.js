@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 // import Chart from './Chart';
 import axios from 'axios';
+import '../../styles/equity.css';
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -17,11 +18,11 @@ const EquityNames = () => {
   return (
     <div className='equitys'>
       <h1 className='title-equity'>Equity Names</h1>
-
-      {names[0]?.map((name) => (
-        <p className='equity-name'>{name.equity.split(' ').join('')}</p>
-      ))}
-
+      <div className='equity-name'>
+        {names[0]?.map((name) => (
+          <p>{name.equity.split(' ').join('')}</p>
+        ))}
+      </div>
       <br />
       <button className='back-button'>
         <Link to={'/'}>Back</Link>
