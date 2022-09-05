@@ -5,7 +5,7 @@
 -- CREATE DATABASE equity_data;
 
 -- Connect 
-\c d2gtn0v66q5qme; 
+\c  equity_data; 
 
 DROP TABLE IF EXISTS charts;
 

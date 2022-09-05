@@ -54,13 +54,15 @@ const NewChart = () => {
 
   return (
     <div className='new'>
-      {/* <h1 className='title'>New Entry</h1> */}
-      <div className='new-list'></div>
+      <h1 className='title'>New</h1>
+      {/* <div className='new-list'></div> */}
       <form onSubmit={handleSubmit}>
-        <div className='color1'>
+        <div className='center'>
+          <div>
           <label className='new-label1' htmlFor='equity_name'>
-            Equity_name
+            Equity_name:  
           </label>
+          <div>
           {/* <input
             className='text'
             id='equity_name'
@@ -71,27 +73,35 @@ const NewChart = () => {
             onChange={handleTextChange}
           /> */}
           <select
+            className='text'
             onChange={handleTextChange}
             id='equity_name'
             name='equity_name'
           >
-            <option value='⬇️ Select an option ⬇️'>
+            <option className='text' value='⬇️ Select an option ⬇️'>
               {' '}
               -- Select an option --{' '}
             </option>
 
             {equities[0]?.map((ele, index) => {
               return (
-                <option key={index} value={ele.equity.split(' ').join('')}>
+                <option
+                  className='text'
+                  key={index}
+                  value={ele.equity.split(' ').join('')}
+                >
                   {ele.equity.split(' ').join('')}
                 </option>
               );
             })}
           </select>
-
+          </div>
+          </div>
+          <div>
           <label className='new-label1' htmlFor='chart_name'>
-            Chart Name
+            Chart Name: 
           </label>
+          <div>
           <input
             className='text'
             id='chart_name'
@@ -101,10 +111,13 @@ const NewChart = () => {
             value={chart.chart_name}
             onChange={handleTextChange}
           />
-
+          </div>
+          </div>  
+          <div> 
           <label className='new-label1' htmlFor='metrics'>
-            Metrics
+            Metrics: 
           </label>
+          <div>
           {/* <input
             className='text'
             id='metrics'
@@ -114,7 +127,12 @@ const NewChart = () => {
             onChange={handleTextChange}
             required
           /> */}
-          <select onChange={handleTextChange} id='metrics' name='metrics'>
+          <select
+            className='text'
+            onChange={handleTextChange}
+            id='metrics'
+            name='metrics'
+          >
             <option value='⬇️ Select an option ⬇️'>
               {' '}
               -- Select an option --{' '}
@@ -125,10 +143,13 @@ const NewChart = () => {
               </option>
             ))}
           </select>
-
+          </div>
+          </div> 
+          <div>
           <label className='new-label1' htmlFor='users'>
-            Users
+            Users: 
           </label>
+          <div>
           <input
             className='text'
             id='users'
@@ -138,7 +159,8 @@ const NewChart = () => {
             onChange={handleTextChange}
             required
           />
-
+           </div>
+          </div>
           <br />
           <input className='button' type='submit' />
         </div>

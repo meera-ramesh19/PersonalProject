@@ -42,15 +42,15 @@ const getChartData = async (equity, chart, metrics) => {
     const high_arr = [];
     const date_arr = [];
     let metric_vals = [];
-   
+
     const metric = chartData[0].metrics.toString().toLowerCase();
     console.log('in side charts.js metric', metric);
     for (let i = 0; i < chartData.length; i++) {
       date_arr.push(chartData[i].date);
-      price_arr.push(chartData[i].Price);
-      high_arr.push(chartData[i].High);
-      open_arr.push(chartData[i].Open);
-      low_arr.push(chartData[i].Low);
+      price_arr.push(chartData[i].price);
+      high_arr.push(chartData[i].high);
+      open_arr.push(chartData[i].open);
+      low_arr.push(chartData[i].low);
     }
 
     if (metric === 'price') {

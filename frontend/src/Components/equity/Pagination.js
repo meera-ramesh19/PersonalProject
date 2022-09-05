@@ -1,10 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import '../../styles/page.css';
-
-// ##code for Pagination is https://codesandbox.io/s/cnbx8
-
-const LEFT_PAGE = 'LEFT';
-const RIGHT_PAGE = 'RIGHT';
+import React, { useState, useEffect } from "react";
+const LEFT_PAGE = "LEFT";
+const RIGHT_PAGE = "RIGHT";
 const range = (from, to, step = 1) => {
   let i = from;
   const range = [];
@@ -23,12 +19,12 @@ const Paginations = (props) => {
     pageLimit,
     pageNeighbours,
     onPageChanged,
-    currentPage,
+    currentPage
   } = props;
   const [totalPages, setTotalPages] = useState(0);
   useEffect(() => {
     setTotalPages(Math.ceil(totalRecords / pageLimit));
-  }, [setTotalPages]);
+  }, [totalPages]);
 
   const fetchPageNumbers = () => {
     const totalNumbers = pageNeighbours * 2 + 3;
@@ -63,33 +59,33 @@ const Paginations = (props) => {
 
   const pages = fetchPageNumbers() || [];
   return (
-    <nav aria-label='Equities Pagination'>
-      <ul className='pagination'>
+    <nav aria-label="Countries Pagination">
+      <ul className="pagination">
         {pages.map((page, index) => {
           if (page === LEFT_PAGE)
             return (
-              <li key={index} className='page-item'>
+              <li key={index} className="page-item">
                 <a
-                  href='/'
-                  className='page-link'
-                  aria-label='Previous'
+                  href="/"
+                  className="page-link"
+                  aria-label="Previous"
                   onClick={(e) => onPageChanged(e, pageNeighbours * 2 - 1)}
                 >
-                  <span aria-hidden='true'>&laquo;</span>
+                  <span aria-hidden="true">&laquo;</span>
                 </a>
               </li>
             );
 
           if (page === RIGHT_PAGE)
             return (
-              <li key={index} className='page-item'>
+              <li key={index} className="page-item">
                 <a
-                  className='page-link'
-                  href='/'
-                  aria-label='Next'
+                  className="page-link"
+                  href="/"
+                  aria-label="Next"
                   onClick={(e) => onPageChanged(e, pageNeighbours * 2 + 3)}
                 >
-                  <span aria-hidden='true'>&raquo;</span>
+                  <span aria-hidden="true">&raquo;</span>
                 </a>
               </li>
             );
@@ -97,11 +93,11 @@ const Paginations = (props) => {
           return (
             <li
               key={index}
-              className={`page-item${currentPage === page ? ' active' : ''}`}
+              className={`page-item${currentPage === page ? " active" : ""}`}
             >
               <a
-                className='page-link'
-                href='/'
+                className="page-link"
+                href="/"
                 onClick={(e) => onPageChanged(e, page)}
               >
                 {page}

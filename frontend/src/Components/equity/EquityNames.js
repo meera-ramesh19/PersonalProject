@@ -12,16 +12,19 @@ const EquityNames = () => {
   useEffect(() => {
     axios.get(`${API}/equities/names`).then((res) => {
       setNames(res.data.payload);
+
     });
   }, []);
-
+  console.log(names)
   return (
     <div className='equitys'>
       <h1 className='title-equity'>Equity Names</h1>
       <div className='equity-name'>
-        {names[0]?.map((name) => (
-          <p>{name.equity.split(' ').join('')}</p>
+        <ul className='lists'>
+        {names[0]?.map((name,index) => (
+          <li key={name.equity}>{name.equity.split(' ').join('')}</li>
         ))}
+        </ul>
       </div>
       <br />
       <button className='back-button'>

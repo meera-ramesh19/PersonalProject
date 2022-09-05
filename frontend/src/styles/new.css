@@ -1,59 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 .new {
   text-align: center;
-  width: 90%;
-  margin: auto;
-  margin-top: 5%;
+  /* width: 90%; */
+  margin: 3rem auto;
+  /* margin-top: 5%; */
   border-radius: 2%;
-  font-size: 25px;
+  font-size: 2rem;
   opacity: 0.98;
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* background-repeat: no-repeat;
+  background-size: cover; */
   font-family: 'Inter';
   border-radius: 2%;
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
+  box-sizing: border-box;
 }
 
-.new-list {
+/* .new-list {
   font-size: 30px;
   font-weight: 900;
   display: flex;
   flex-direction: column;
   float: left;
   padding: 10%;
-}
+} */
 .form {
+  margin: 0 auto;
   padding: 10%;
 }
 
 .color1 {
   display: flex;
   flex-direction: column;
-  background-color: #ae9e8d74;
-  margin-right: 10%;
-  margin-left: 50%;
-  font-size: larger;
-  padding: 40px;
-  padding-left: 10%;
-  padding-right: 10%;
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #ae9e8d74; */
+  /* margin-right: 10%;
+  margin-left: 50%; */
+  font-size: mwdium;
+  /* padding: 40px; */
+  /* padding-left: 10%;
+  padding-right: 10%; */
   border-radius: 10px;
-  border: 2px solid;
+  /* border: 2px solid;
   border-color: #ddd7b6;
-  box-shadow: 10px 5px 5px #282828;
+  box-shadow: 10px 5px 5px #282828; */
+}
+
+.center {
+  margin: auto;
+  width: 30%;
+  border: 3px solid green;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .text {
-  color: #1c3c3e;
+  color:  #111;
+  /* #1c3c3e; */
+  font-size: large;
 }
 
 .new-label1 {
-  color: black;
-  font-size: small;
+  color: #111;
+  font-size: large;
 }
 
 .title {
-  padding-top: 2%;
-  color: #e1ddca;
+  padding:0  0  2% 0;
+  color: #111;
 }
 
 .new-label {
@@ -66,29 +82,23 @@
 }
 
 input[type='submit'] {
-  float: right;
-  background-color: #e1ddcb;
+  /* float: right; */
   border: 2px solid #111;
   border-radius: 8px;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   color: #111;
   cursor: pointer;
-  display: flex;
-  font-family: 'Love Ya Like A Sister', cursive;
-  font-size: 25px;
-  height: 48px;
-  justify-content: center;
-  line-height: 24px;
-  max-width: 100%;
-  padding: 0 25px;
-  position: relative;
+  /* display: flex; */
+  font-family: 'Inter';
+  font-size: 1.5rem;
+  /* justify-content: center; */
+  margin: 0 auto;
+  width: 70%;
   text-align: center;
-  text-decoration: none;
+  /* text-decoration: none; */
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  margin-right: 18%;
-  margin-top: 2%;
 }
 
 input[type='submit']:after {
@@ -108,17 +118,17 @@ input[type='submit']:after {
 
 input[type='submit']:hover:after {
   transform: translate(0, 0);
-  text-decoration: underline;
-}
+  /* text-decoration: underline;*/
+} 
 
 input[type='submit']:active {
-  background-color: #ffdeda;
+  /* background-color: #ffdeda; */
   outline: 0;
 }
 
 input[type='submit']:hover {
   outline: 0;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   color: #317479;
 }
 

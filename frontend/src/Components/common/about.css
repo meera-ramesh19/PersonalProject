@@ -22,7 +22,8 @@
     font-size: 20px;
     display: flex;
     flex-direction: column;
-    color: #50bfbf;
+    color:  #3c8c30;
+    /* #50bfbf; */
     padding-bottom: 20px;
     padding: 20px;
     border-radius: 20px;
@@ -53,7 +54,7 @@
     font-family: 'Inter';
     font-weight: 400;
     font-size: 30px;
-    color:#50bfbf;
+    color: #3c8c30;
 }
 .border{
      padding: 2%;

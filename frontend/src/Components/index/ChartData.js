@@ -40,8 +40,7 @@ const ChartData = () => {
     axios
       .get(eq_url)
       .then((res) => {
-        // console.log('data=', res.data.payload);
-
+       
         setPriceInfo(res.data.payload.price);
         setChartInfo(res.data.payload);
         setMetricInfo(res.data.payload.metric);

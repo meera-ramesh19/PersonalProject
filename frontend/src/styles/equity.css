@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 .equity-name {
-  text-align:center;
-  display: block;
   font-size: 1rem;
   font-weight: 900;
   color: black;
   font-family: 'Inter';
+  margin: 0 50%;
 }
 
 .equity-name:hover {
@@ -14,11 +13,11 @@
 }
 .equitys {
   width: 90%;
-  max-width:100%;
-  text-align:center;
+  max-width: 100%;
+  text-align: center;
   margin: 0 auto;
   padding-bottom: 10px;
-} 
+}
 .title-equity {
   padding: 2%;
   color: #111;
@@ -30,10 +29,18 @@ h1 {
   text-align: center;
   font-size: 3rem;
   color: black;
-  
 }
 
 .back-button {
   margin: auto;
   margin-bottom: 2%;
+}
+
+.lists {
+  text-align: center;
+  list-style-type: none;
+}
+
+ul li + span {
+  text-align: left;
 }

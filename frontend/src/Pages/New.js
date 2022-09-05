@@ -10,8 +10,8 @@ const New = () => {
       transition={{ duration: 0.5 }}
       style={{ height: '100vh' }}
     >
-      <h2 style={{ textAlign: 'center' }}>New Stocks</h2>
-      <NewChart/>
+      {/* <h2 style={{ textAlign: 'center' }}>New Stocks</h2> */}
+      <NewChart />
     </motion.div>
   );
 };

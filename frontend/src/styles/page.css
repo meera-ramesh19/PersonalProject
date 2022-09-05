@@ -34,8 +34,8 @@ tr,td,th {
   display: flex;
   flex-direction: column;
   justify-content: center;
-	align-items: center;
-	padding-top: 10!important;
+  align-items: center;
+  /* padding-top: 10; */
 }
 
 /* Override some Bootstrap pagination styles */
@@ -47,16 +47,16 @@ ul.pagination {
 }
 ul.pagination li.page-item.active a.page-link {
 	color: #445565 ;
-	background-color: #e3e7eb ;
-	border-color: #ced4da ;
+	/* background-color: #e3e7eb ; */
+	border-color: #111;
 }
 ul.pagination a.page-link {
 	padding: 0.75rem 1rem;
 	min-width: 3.5rem;
 	text-align: center;
 	box-shadow: none ;
-	border-color: #ced4da ;
-	color: #6b88a4;
+	border-color:#111;
+	color: black;
 	font-weight: 900;
 	font-size: 1rem;
 }
