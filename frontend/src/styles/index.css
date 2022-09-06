@@ -13,6 +13,7 @@
 }  */
 
 .charts-name {
+ 
   display: flex;
   flex-wrap: wrap;
   font-size: 22px;
@@ -54,9 +55,9 @@ h1 {
 }
 
 .charts {
-  /* background-color: #888888; */
-  background-repeat: no-repeat;
-  background-size: cover;
+ background-color:#86d0c24a; 
+  /* background-repeat: no-repeat;
+  background-size: cover; */
   width: 90%;
   max-width: 100%;
   margin: auto;

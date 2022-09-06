@@ -91,7 +91,7 @@ const Charts = () => {
                 </td>
 
                 <td>
-                  {/* <button type='submit' onClick={() => setFlag(!flag)}>View</button>  */}
+                  
 
                   <Link
                     style={{ color: 'black' }}

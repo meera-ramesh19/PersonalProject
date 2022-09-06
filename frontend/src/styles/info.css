@@ -49,7 +49,7 @@ tr.green th {
 }
 
 .table-container {
-  overflow: auto;
+  overflow: visible;
   max-height: auto;
   border: 1px solid black;
   margin: 0 auto;

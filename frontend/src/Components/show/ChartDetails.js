@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 // import { FiBarChart } from 'react-icons/fi';
+import '../../styles/show.css'
 import ChartData from '../index/ChartData';
 
 const API = process.env.REACT_APP_API_URL;
@@ -33,7 +34,7 @@ const ChartDetails = () => {
       });
   };
   return (
-    <div className='show'>
+    <div className='shows'>
       <h1 className='show-title'>{chart.chart_name}</h1>
 
       <div className='show-info'>
@@ -42,6 +43,7 @@ const ChartDetails = () => {
         </h2>
         {/* <h2 className='show_p'>
         <span> Chart Name: </span> {chart.chart_name}
+
       </h2> */}
         <h2 className='show_p'>
           <span> Equity Name: </span> {chart.equity_name}
@@ -74,6 +76,8 @@ const ChartDetails = () => {
         </div>
       </div>
     </div>
+
+  
   );
 };
 

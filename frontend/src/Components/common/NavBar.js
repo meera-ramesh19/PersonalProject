@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
-import WixLogo from '../../assets/WixLogo.jpeg';
+import WixLogo from '../../assets/Logo.jpg';
 import './navbar.css';
 
 //https://www.crazyegg.com/blog/color-palettes-financial/ for colors

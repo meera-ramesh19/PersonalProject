@@ -4,11 +4,12 @@ import './about.css';
 
 export default function AboutMe() {
   return (
+    <div className='aboutMe'>
     <div className='aboutpage'>
       <hr></hr>
       <br />
 
-      <h2 className='aboutus'>About Me</h2>
+      {/* <h2 className='about'>About Me</h2> */}
 
       <div>
         <div className='box'>
@@ -34,16 +35,20 @@ export default function AboutMe() {
             <a className='github' href='https://github.com/meera-ramesh19'>
               <img align='center' src={GitHubMark64} alt=''></img>
             </a>
-            <a
-              className='github'
-              href='https://www.linkedin.com/in/meeraramesh/'
-              target='blank'
-            >
-              <img align='center' src={LILogo} alt='meeraramesh' height='30' />
-            </a>
+            <a className="github" href="https://www.linkedin.com/in/meeraramesh/" target="blank">
+              <img
+                align="center"
+                src={LILogo}
+                alt="meeraramesh"
+                height="50"
+                
+              />
+            
+            </a> 
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
