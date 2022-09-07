@@ -1,14 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-.aboutMe{
-  height:100%;
-   width:100%;
-  background-color: #86d0c24a;
-  color:#111;
-}
 .profile {
-  height: 250px; 
-  padding:  2% ;
-  /* border: 2px solid #E1DCCB; */
+  height: 250px;
+  padding: 2%;
+  border: 2px solid #86d0c24a; 
   box-sizing: border-box;
   position: relative;
   cursor: pointer;
@@ -17,88 +10,83 @@
   -webkit-user-select: none;
   touch-action: manipulation;
   float: left;
-  margin-top:-3%;
-  margin-left:3%;
 }
 
-.aboutpage{
-    margin: auto;
-    width: 90vw;
-    height:90vh;
-    font-size: 20px;
-    /* display: flex;
-    flex-direction: column; */
-    /* color:  #3c8c30; */
-    /* #50bfbf; */
-    /* padding-bottom: 20px;
-    padding: 20px; */
-    border-radius: 20px;
-    /* background-color: #72d2bf4a; */
-    /* #86d0c24a */
+.aboutpage {
+  margin: auto;
+  width: 90%;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  color:black;
+  padding-bottom: 20px;
+  /* background-image: url('https://media.istockphoto.com/photos/old-wooden-pallet-plank-texture-background-picture-id1204646431?b=1&k=20&m=1204646431&s=170667a&w=0&h=S2LPM5JFE04V1DLxtAl5DOtx-6NRc--hRyfn2Z1iAaA='); */
+  padding: 20px;
+  border-radius: 20px;
 }
-.about{
-    font-size: 30px;
-    margin: 20px;
-    font-family: 'Inter';
-    
+.aboutMe {
+  font-size: 50px;
+  margin: 20px;
+  font-family: 'Inter';
 }
-
 .bio {
- font-size: 18px;
- margin-top:-5%;
- margin-right:5%;
- margin-left:40%;
+  font-size: 28px;
+  margin-left: 30%;
+  margin-right: 15%;
 }
 
 .about-title {
-  font-family: 'Inter';  
-  font-weight: 300;
-    padding: 10px;
-    margin: 20px;
+  font-family: 'Inter';
+  font-weight: 900;
+  padding: 10px;
+  margin: 20px;
 }
 .name {
-    padding: 2%;
-    margin: auto;
-    font-family: 'Inter';
-    font-weight: 400;
-    font-size: 30px;
-    /* color: #3c8c30; */
-}
-.border{
-     padding: 2%;
-}
- .year {
-    text-align: center;
- }
-
-.box{
+  padding: 2%;
+  margin: auto;
   font-family: 'Inter';
-  /* background-color: #86d0c24a; */
-  /* border: 2px solid; */
-  margin:auto;
+  font-weight: 800;
+  font-size: 50px;
+  color: black;
+}
+.border {
+  padding: 2%;
+}
+.year {
+  text-align: center;
+}
+
+.box {
+  font-family: 'Inter';
+  background-color: #86d0c24a;
+  border: 2px solid;
+  width:800px;
+  margin: auto;
   padding-bottom: 20px;
   border-radius: 10px;
+  color:black;
 }
 
- hr {
-     border: #0c4b18a5 .5px solid;
+hr {
+  border: #0c4b18a5 0.5px solid;
+}
+.github {
+  padding-left: 2%;
+  padding-right: 2%;
+}
 
- }
- .links{
-    margin-top:4%;
- }
- .github{
+.appBio {
+  margin: 20px;
+  margin-right: 20px;
+}
+
+.github :hover {
+  margin:3rem ;
+  color: black;
+  box-shadow: 0 15px 15px #1e3c3d;
+}
+
+@media (max-width: 768px) {
   
-   padding-left: 2%;
-   padding-right: 2%;
- }
-
-.appbio {
- margin: 20px;
- margin-right: 20px;
 }
 
-.github :hover{
-    color: #ffffff;
-  box-shadow: 0 15px 15px #1E3C3D;
-}

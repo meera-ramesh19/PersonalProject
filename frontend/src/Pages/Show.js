@@ -10,7 +10,7 @@ export default function Show() {
       transition={{ duration: 0.5 }}
       style={{  height: '100vh' }}
     >
-      <h2 style={{ textAlign: 'center' }}>New Transaction</h2>
+      
       <ChartDetails />
     </motion.div>
   );

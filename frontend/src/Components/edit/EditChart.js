@@ -22,7 +22,7 @@ const EditChart = () => {
   ];
 
   const [equity, setEquity] = useState([]);
-  // const [metrics, setMetrics] = useState("⬇️ Select a metric ⬇️")
+
 
   useEffect(() => {
     axios.get(`${API}/equities/names`).then((res) => {
@@ -69,104 +69,94 @@ const EditChart = () => {
 
   return (
     <div className='edit'>
-      <h1 className='title'>Edit Chart Entry</h1>
-
+      <h1 className='title'>Edit Charts</h1>
       <form className='form' onSubmit={handleSubmit}>
         <div className='color2'>
-          <label className='edit-label' htmlFor='equtiy_name'>
-            Equity Name
-          </label>
-          {/* <input
-          className='text'
-          id='equity_name'
-          disabled
-          type='text'
-          name='equity_name'
-          value={chart.equity_name}
-          placeholder='apple'
-          onChange={handleTextChange}
-        />  */}
-          <select
-            onChange={handleTextChange}
-            id='equity_name'
-            name='equity_name'
-            value={chart.equity_name}
-          >
-            <option value='⬇️ Select an option ⬇️'>
-              {' '}
-              -- Select an option --{' '}
-            </option>
+          <div style={{ padding: '1rem 0' }}>
+            <label
+              style={{ color: 'black', paddingRight: '1rem' }}
+              className='edit-label'
+              htmlFor='equity_name'
+            >
+              Equity Name
+            </label>
 
-            {equity[0]?.map((ele, index) => {
-              return (
-                <option key={index} value={ele.equity.split(' ').join('')}>
-                  {ele.equity.split(' ').join('')}
-                </option>
-              );
-            })}
-          </select>
-
-          <label className='edit-label' htmlFor='chart_name'>
-            Chart Name
-          </label>
-          <input
-            className='text'
-            id='chart_name'
-            value={chart.chart_name}
-            type='text'
-            onChange={handleTextChange}
-            placeholder='Name Of chart'
-            required
-          />
-
-          <label className='edit-label' htmlFor='metrics'>
-            Metrics
-          </label>
-          {/* <input
-          className='text'
-          id='metrics'
-          value={chart.metrics}
-          disabled type='text'
-          onChange={handleTextChange}
-          placeholder='price'
-          required
-        /> */}
-          <select
-            onChange={handleTextChange}
-            id='metrics'
-            name='metrics'
-            value={chart.metrics}
-          >
-            <option value='⬇️ Select an option ⬇️'>
-              {' '}
-              -- Select an option --{' '}
-            </option>
-            {metricValue.map((metric, index) => (
-              <option key={index} value={metric.value.toLowerCase()}>
-                {metric.label.toLowerCase()}
+            <select
+              style={{ color: 'black' }}
+              onChange={handleTextChange}
+              id='equity_name'
+              name='equity_name'
+              value={chart.equity_name}
+            >
+              <option value='⬇️ Select an option ⬇️'>
+                {' '}
+                -- Select an option --{' '}
               </option>
-            ))}
-          </select>
 
-          {/* <label className='new-label1' htmlFor='users'>
-            Users
-          </label>
-          <input
-            className='text'
-            id='users'
-            name='users'
-            value={chart.users}
-            onChange={handleTextChange}
-            type='text'
-            placeholder='user name'
-            required
-          /> */}
+              {equity[0]?.map((ele, index) => {
+                return (
+                  <option key={index} value={ele.equity.split(' ').join('')}>
+                    {ele.equity.split(' ').join('')}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+          <div style={{ padding: '1rem 0' }}>
+            <label
+              style={{ color: 'black', paddingRight: '1rem' }}
+              className='edit-label'
+              htmlFor='chart_name'
+            >
+              Chart Name
+            </label>
+            <input
+              style={{ color: 'black' }}
+              className='text'
+              id='chart_name'
+              value={chart.chart_name}
+              type='text'
+              onChange={handleTextChange}
+              placeholder='Name Of chart'
+              required
+            />
+          </div>
+          <div style={{ padding: '1rem 0' }}>
+            <label
+              className='edit-label'
+              style={{ color: 'black', paddingRight: '1rem' }}
+              htmlFor='metrics'
+            >
+              Metrics:
+            </label>
 
-          <input type='submit' />
+            <select
+              style={{ color: 'black' }}
+              onChange={handleTextChange}
+              id='metrics'
+              name='metrics'
+              value={chart.metrics}
+            >
+              <option value='⬇️ Select an option ⬇️'>
+                {' '}
+                -- Select an option --{' '}
+              </option>
+              {metricValue.map((metric, index) => (
+                <option key={index} value={metric.value.toLowerCase()}>
+                  {metric.label.toLowerCase()}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <input className='' type='submit' />
         </div>
-        <Link to={`/charts/${id}`}>
-          <button className='edit-button'>Back</button>
-        </Link>
+
+        <div style={{ padding: '1rem' }}>
+          <Link to={`/charts/${id}`}>
+            <button className='edit-button'>Back</button>
+          </Link>
+        </div>
       </form>
     </div>
   );

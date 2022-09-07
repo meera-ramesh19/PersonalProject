@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-// import { FiBarChart2 } from 'react-icons/fi';
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -63,15 +64,7 @@ const NewChart = () => {
             Equity_name:  
           </label>
           <div>
-          {/* <input
-            className='text'
-            id='equity_name'
-            type='text'
-            name='equity_name'
-            value={stock.equity_name}
-            placeholder='apple'
-            onChange={handleTextChange}
-          /> */}
+      
           <select
             className='text'
             onChange={handleTextChange}
@@ -118,15 +111,7 @@ const NewChart = () => {
             Metrics: 
           </label>
           <div>
-          {/* <input
-            className='text'
-            id='metrics'
-            value={chart.metrics}
-            type='text'
-            placeholder='price'
-            onChange={handleTextChange}
-            required
-          /> */}
+      
           <select
             className='text'
             onChange={handleTextChange}

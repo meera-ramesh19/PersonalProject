@@ -2,11 +2,9 @@ import React, { useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import WixLogo from '../../assets/Logo.jpg';
+import { FcComboChart } from 'react-icons/fc';
 import './navbar.css';
 
-//https://www.crazyegg.com/blog/color-palettes-financial/ for colors
-//bf7e04
-//025928,3c8c30,d96704,818385,303030
 export default function NavBar() {
   const [open, setOpen] = useState(false);
 
@@ -17,14 +15,16 @@ export default function NavBar() {
   const closeMenu = () => {
     setOpen(false);
   };
+
   return (
-    <nav className='navbar sticky'>
+    <nav className='navbar'>
       <Link to='/' className='nav-logo'>
-        <img
+        {/* <img
           src={WixLogo}
           alt='logo'
           style={{ width: '50px', height: '50px' }}
-        />
+        /> */}
+        <FcComboChart />
       </Link>
       <div onClick={handleClick} className='nav-icon'>
         {open ? <FiX /> : <FiMenu />}
@@ -61,6 +61,7 @@ export default function NavBar() {
           </Link>
         </li>
       </ul>
+
       {/* <ul>
           
                <li class="fullwidth">

@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-// import { FiBarChart } from 'react-icons/fi';
 import '../../styles/show.css'
-import ChartData from '../index/ChartData';
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -35,16 +33,14 @@ const ChartDetails = () => {
   };
   return (
     <div className='shows'>
+      <p style={{ textAlign: 'center',color:'black' }}>Show Charts</p>
       <h1 className='show-title'>{chart.chart_name}</h1>
 
       <div className='show-info'>
         <h2 className='show_p'>
-          <span>Metrics: </span> {chart.id}
+          <span>Chart Id: </span> {chart.id}
         </h2>
-        {/* <h2 className='show_p'>
-        <span> Chart Name: </span> {chart.chart_name}
-
-      </h2> */}
+      
         <h2 className='show_p'>
           <span> Equity Name: </span> {chart.equity_name}
         </h2>
@@ -56,7 +52,7 @@ const ChartDetails = () => {
         </h2>
       </div>
       <div>
-        {/* <ChartData /> */}
+      
       </div>
       <div className='showNavigation'>
         <div>

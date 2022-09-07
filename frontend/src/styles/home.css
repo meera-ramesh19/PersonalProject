@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 .home {
   width: 90%;
   margin: auto;
   color: #262626;
-  background:#A42A04 ;
-
+  background: #a42a04;
 }
 
 .about {
@@ -24,4 +24,16 @@
   margin: 1rem auto;
   color: #111;
   font-family: 'Inter';
+}
+
+@media (max-width: 768px) {
+  .appText h3,
+  .appText h4 {
+    width: 400px;
+  }
+  img {
+    text-align: center;
+    width: 470px;
+    height: 400px;
+  }
 }

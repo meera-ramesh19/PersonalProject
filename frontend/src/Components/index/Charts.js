@@ -21,11 +21,11 @@ const Charts = () => {
     <div className='charts'>
       <h1 className='title-charts'>Chart</h1>
       <Table
-        className='table-container'
+        className='indextable-container table table-responsive'
         stripped='true'
         bordered
         hover
-        responsive='sm'
+        responsive='md'
       >
         <thead>
           <tr className='green'>
@@ -110,7 +110,7 @@ const Charts = () => {
         })}
       </section> */}
       <br />
-      <button className='back-button'>
+      <button className='indexback-button'>
         <Link to={'/'}>Back</Link>
       </button>
     </div>
