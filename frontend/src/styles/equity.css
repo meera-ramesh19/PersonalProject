@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+.equity-info{
+  background-color:#86d0c24a;
+  width:100vw;
+}
 
 .equity-name {
   font-size: 1rem;
@@ -9,10 +13,11 @@
 }
 
 .table-container {
-  width: auto;
-  table-layout: auto;
+  /* width: auto; */
+  overflow:scroll;
+  /* table-layout: auto;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; */
 }
 
 .equity-name:hover {

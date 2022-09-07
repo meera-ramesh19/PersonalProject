@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 .new {
+  height: 100vh;
   text-align: center;
   margin: 3rem auto;
   border-radius: 2%;
   font-size: 2rem;
   opacity: 0.98;
-  background-repeat: #86d0c24a;
+  background-color: #86d0c24a;
   font-family: 'Inter';
   border-radius: 2%;
   box-sizing: border-box;
@@ -70,6 +71,7 @@ input[type='submit'] {
   margin: 0 auto;
   width: 40%;
   text-align: center;
+  background-color: #86d0c24a;
   /* user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation; */

@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 .edit{
     text-align: center;
     width: 90%;
-    /* background-color: #fae7e498; */
+   
     margin: auto;
     margin-top: 5%;
     border-radius: 2%;
@@ -19,12 +19,12 @@ font-weight: 900;
 display: flex;
 flex-direction: column;
 float: left;
-/* padding: 10%; */
+
 color:black;
 
 }
 .form{
-    /* padding: 10%; */
+   
     color:black;
     
 }
@@ -33,13 +33,8 @@ color:black;
   display: flex;
   flex-direction: column;
   color:black;
-  /* background-color: #ae9e8d4e; */
-  /* margin-right: 0%;
-  margin-left: 50%; */
   font-size: larger;
   padding: 40px;
-  /* padding-left: 10%;
-  padding-right: 10%; */
   border-radius: 10px;
   border: 2px solid;
   border-color: #E4E5E5;
@@ -61,9 +56,8 @@ color:black;
 }
 
 
-/* input[type='submit'] { */
-    /* float: right; */
-    /* background-color: #d6d3c0d9;
+ input[type='submit'] { 
+  
     margin:0 auto;
     border: 2px solid #111;
     border-radius: 8px;
@@ -71,29 +65,25 @@ color:black;
     cursor: pointer;
     font-family: 'Inter';
     font-size: 1rem;
-    /* justify-content: center; *
     width:1rem;
    
     text-align: center;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation; *
-  }*/
+  }*
   input[type='submit'] {
-    /* float: right; */
+   
     border: 2px solid #111;
     border-radius: 8px;
-    /* box-sizing: border-box; */
+  
     color: #111;
     cursor: pointer;
-    /* display: flex; */
-    font-family: 'Inter';
-    font-size: 1.5rem;
-    /* justify-content: center; */
+   
     margin: 0 auto;
     width: 40%;
     text-align: center;
-    /* text-decoration: none; */
+ 
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
@@ -112,5 +102,92 @@ color:black;
     input[type=submit] {
       padding: 0 40px;
     }
+  }  */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.edit {
+  height:100vh;
+  text-align: center;
+  margin: 3rem auto;
+  border-radius: 2%;
+  font-size: 2rem;
+  opacity: 0.98;
+  background-color: #86d0c24a;
+  font-family: 'Inter';
+  border-radius: 2%;
+  box-sizing: border-box;
+}
+
+.form {
+  margin: 0 auto;
+  padding: 10%;
+}
+
+.color2 {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+  font-size: mwdium;
+  border-radius: 10px;
+}
+
+.center {
+  margin: auto;
+  width: 40%;
+  border: 3px solid green;
+  padding: 3rem 0rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.text {
+  color: #111;
+  font-size: large;
+}
+
+.edit-label {
+  color: #111;
+  font-size: large;
+}
+
+.title {
+  padding: 0 0 2% 0;
+  color: #111;
+}
+
+
+.text {
+  color: #1d3c3d;
+}
+
+input[type='submit'] {
+  border: 2px solid #111;
+  border-radius: 8px;
+  color: #111;
+  cursor: pointer;
+  font-family: 'Inter';
+  font-size: 1.5rem;
+  margin: 0 auto;
+  width: 5rem;
+  text-align: center;
+  background-color:#86d0c24a; 
+}
+
+.edit-button{
+background-color:#86d0c24a; 
+}
+@media (max-width: 768px) {
+  .new {
+    width: 100%;
   }
- 
+  input[type='submit'] {
+    width: 100%;
+  }
+  .center {
+    border: 1px none;
+    flex-direction: column;
+  }
+}

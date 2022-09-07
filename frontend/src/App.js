@@ -11,7 +11,7 @@ export default function App() {
     <div clastome='App'>
       <Router>
         <NavBar />
-        <TagLine/>
+        <TagLine />
         <AnimatedRoutes />
         {/* <Footer />  */}
       </Router>

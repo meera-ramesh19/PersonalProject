@@ -1,7 +1,7 @@
-.profile {
+/* .profile {
   height: 250px;
   padding: 2%;
-  border: 2px solid #86d0c24a; 
+  border: 2px solid #86d0c24a;
   box-sizing: border-box;
   position: relative;
   cursor: pointer;
@@ -11,82 +11,107 @@
   touch-action: manipulation;
   float: left;
 }
-
+/* 
 .aboutpage {
   margin: auto;
   width: 90%;
-  font-size: 25px;
+  font-size: 2rem;
   display: flex;
   flex-direction: column;
-  color:black;
+  color: black;
   padding-bottom: 20px;
-  /* background-image: url('https://media.istockphoto.com/photos/old-wooden-pallet-plank-texture-background-picture-id1204646431?b=1&k=20&m=1204646431&s=170667a&w=0&h=S2LPM5JFE04V1DLxtAl5DOtx-6NRc--hRyfn2Z1iAaA='); */
+  /* background-image: url('https://media.istockphoto.com/photos/old-wooden-pallet-plank-texture-background-picture-id1204646431?b=1&k=20&m=1204646431&s=170667a&w=0&h=S2LPM5JFE04V1DLxtAl5DOtx-6NRc--hRyfn2Z1iAaA='); *
   padding: 20px;
   border-radius: 20px;
-}
-.aboutMe {
-  font-size: 50px;
+}*/
+ .aboutMe {
+  font-size: 1.2rem;
   margin: 20px;
   font-family: 'Inter';
-}
-.bio {
+  background-color: #86d0c24a;
+} 
+/*.bio {
   font-size: 28px;
   margin-left: 30%;
   margin-right: 15%;
-}
-
+} */
+/* 
 .about-title {
   font-family: 'Inter';
   font-weight: 900;
   padding: 10px;
   margin: 20px;
-}
+} *
 .name {
   padding: 2%;
   margin: auto;
   font-family: 'Inter';
-  font-weight: 800;
-  font-size: 50px;
+  font-weight: 500;
+  font-size: 2rem;
   color: black;
 }
 .border {
   padding: 2%;
-}
-.year {
-  text-align: center;
+} */
+.aboutMe{
+ height:100vh;
+ background-color:#86d0c24a ;
 }
 
 .box {
   font-family: 'Inter';
-  background-color: #86d0c24a;
   border: 2px solid;
-  width:800px;
+  width: 800px;
   margin: auto;
+  display:block;
   padding-bottom: 20px;
   border-radius: 10px;
-  color:black;
+  color: black;
 }
-
+.profile{
+  text-align:center;
+}
+.picInfo{
+  display:block;
+}
+.image,.bio{
+  margin:3rem 2rem ;
+  display:block;
+}
+.links{
+  display:flex;
+}
 hr {
   border: #0c4b18a5 0.5px solid;
 }
-.github {
-  padding-left: 2%;
-  padding-right: 2%;
-}
 
-.appBio {
+
+.bio {
   margin: 20px;
   margin-right: 20px;
 }
 
 .github :hover {
-  margin:3rem ;
+  margin: 3rem;
   color: black;
   box-shadow: 0 15px 15px #1e3c3d;
 }
 
-@media (max-width: 768px) {
+@media screen and(max-width: 768px) {
+
+  /* .aboutMe {
+   width:700px;
+  } */
+  .picInfo{
+    display:block;
+  }
   
+  .border,.appBio{ 
+    display:block;
+  }
+  .links{
+    display:block;
+  }
+ 
 }
 

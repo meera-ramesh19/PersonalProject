@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-
+import '../../styles/edit.css';
 const API = process.env.REACT_APP_API_URL;
 
 const EditChart = () => {
@@ -69,9 +69,9 @@ const EditChart = () => {
 
   return (
     <div className='edit'>
-      <h1 className='title'>Edit Charts</h1>
+      <h2 className='title'>Edit Charts</h2>
       <form className='form' onSubmit={handleSubmit}>
-        <div className='color2'>
+        <div className='center'>
           <div style={{ padding: '1rem 0' }}>
             <label
               style={{ color: 'black', paddingRight: '1rem' }}

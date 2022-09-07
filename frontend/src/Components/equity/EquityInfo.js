@@ -32,10 +32,11 @@ const EquityInfo = () => {
   const nPages = Math.ceil(equityDetails.length / equitiesPerPage);
 
   return (
-    <div className='equity-info'>
+    <section>
       <h1 className='title-info'>Equity Details</h1>
+      <div className='equity-info'>
       <Table
-        className='tableinfo-container'
+        className='tableinfo-container table'
         stripped='true'
         bordered
         hover
@@ -73,6 +74,7 @@ const EquityInfo = () => {
         setCurrentPage={setCurrentPage}
       />
     </div>
+    </section>
   );
 };
 

@@ -6,16 +6,15 @@ h1 {
 
  .shows {
   text-align: center;
+  height:100vh;
   background-color: #86d0c24a;
-  width: auto;
-  height: auto;
   border-radius: 10px;
   padding-bottom: 10px;
   margin: 0 auto;
 } 
 
 .show-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding-top: 1%;
   padding-bottom: 1%;
   text-align: center;
@@ -23,10 +22,10 @@ h1 {
 }
 
 .show-info{
-
+ padding:1rem 0;
  flex-direction: column;
  align-items:start;
- margin-left: 40;
+ margin-left: 40px;
   }
 
 .show_p {
@@ -44,19 +43,17 @@ span {
   color: black;
 }
 
-
-
-.show-button {
+.show-button,.toggle {
   align-items: center;
-  background-color: #e1dcca;
+  background-color: #86d0c24a;
   border: 2px solid #111;
-  border-radius: 8px;
+  border-radius:10%;
   box-sizing: border-box;
   color: #111;
   cursor: pointer;
   font-family: 'Inter';
-  font-size: 2rem;
-  padding: 0 25px;
+ 
+  padding:1rem;
   text-align: center;
   user-select: none;
   -webkit-user-select: none;
@@ -75,6 +72,3 @@ span {
   margin: 3rem 0;
 }
 
-@media (max-width: 768px) {
- 
-}

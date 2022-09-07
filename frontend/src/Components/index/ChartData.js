@@ -91,11 +91,11 @@ const ChartData = () => {
   };
 
   return (
-    <div className='show'>
-      <h1 className='show-title'>
-        {/* <span>Chart Name:</span> */}
+    <div className='show' style={{background:'#86d0c24a '}}>
+      <h2 className='show-title' style={{fontSize:'1.5rem'}}>
+        <span>Chart Name:</span> 
         {chartInfo.chart_name}
-      </h1>
+      </h2>
 
       <div className='show-info'>
         <h2 className='show_p'>
@@ -136,7 +136,7 @@ const ChartData = () => {
 
       <div className='showNavigation'>
         <Link to={`/charts`} style={{ margin: '0 auto' }}>
-          <button className='show_button'>Back</button>
+          <button className='show-button'>Back</button>
         </Link>
       </div>
     </div>

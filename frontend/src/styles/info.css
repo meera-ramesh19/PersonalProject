@@ -50,17 +50,25 @@ tr.green th {
   border: 1px solid black;
 }
 
-.table-container {
-  overflow: visible;
+.table {
+  /* overflow: visible;
   max-height: auto;
   border: 1px solid black;
-  margin: 0 auto;
+  margin: 0 auto; */
+  height:300px; 
+ display: -moz-groupbox;
 }
 
-th {
+/* th {
   position: sticky;
   top: 0;
   background: white;
+} */
+tbody{
+  overflow: scroll;
+  height: 200px;
+  width: 100%;
+  position: absolute;
 }
 
 td {
@@ -68,6 +76,13 @@ td {
   padding: 0.5rem;
   border: 1px solid black;
 }
+tr {
+  width: 100%;
+  display: inline-table;
+  height:60px;
+  table-layout: fixed;
+    
+  }
 
 tbody td:not(td:first-of-type):hover {
   transform: scale(1.05);

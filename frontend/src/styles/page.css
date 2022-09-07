@@ -33,14 +33,16 @@ th {
   font-size: 1.5rem;
   vertical-align: middle;
 }
-
+/* 
 .pagination-wrapper {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  /* padding-top: 10; */
-}
+  align-items: center; *
+  display:inline-block;
+  
+  /* padding-top: 10; *
+} */
 
 /* Override some Bootstrap pagination styles */
 ul.pagination {
@@ -56,7 +58,7 @@ ul.pagination li.page-item.active a.page-link {
 }
 ul.pagination a.page-link {
   padding: 0.75rem 1rem;
-  min-width: 3.5rem;
+  min-width: 2.5rem;
   text-align: center;
   box-shadow: none;
   border-color: #111;
@@ -66,4 +68,13 @@ ul.pagination a.page-link {
 }
 ul.pagination a.page-link:hover {
   background-color: #f4f4f4;
+}
+
+@media (max-width: 768px) {
+.pagination-wrapper {
+ 
+  flex-wrap: wrap;
+  
+  /* padding-top: 10; */
+}
 }
