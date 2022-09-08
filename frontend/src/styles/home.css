@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-.home {
+/* .home {
   width: 90%;
   margin: auto;
   color: #262626;
   background: #a42a04;
 }
-img
+
 .about {
   margin: auto;
   position: absolute;
@@ -16,11 +16,12 @@ img
   left: 50%;
   font-family: 'Inter', serif;
   color: rgb(0, 0, 0);
-}
+} */
 
 .appText h3,
 .appText h4 {
   width: 800px;
+  height:100vh;
   margin: 1rem auto;
   color: #111;
   font-family: 'Inter';

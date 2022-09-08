@@ -12,10 +12,7 @@ const Home = () => {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
       style={{
-        textAlign: 'center',
-        // backgroundColor: '#87CEEB '
-        // height: '100vh',
-        // width:'800px'
+        textAlign: 'center'
       }}
     >
  
