@@ -86,9 +86,6 @@ const Charts = () => {
                 <td>
                   <Link
                     style={{ color: 'black' }}
-                    // to={{pathName: `/charts/data`,
-                    //     state:{chart}}}
-                    // to={passParam}
                     to={{
                       pathname: `/charts/data`,
                       search: `?metrics=${chart.metrics}&equity_name=${chart.equity_name}&chart_name=${chart.chart_name}`,

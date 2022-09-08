@@ -43,8 +43,8 @@ The repo is to learn uses scraped data to create perform crud operation with nod
 - A little different setup steps for nodejs and python during heroku deployment but finally got
   it to deploy with a little googling and devcenter.
 
-- Need to scale the dynos using heroku ps:scale web=1 which will start the app. By mistake, when I  
-  scaled it 0 my app crashed and there was error H14
+- Need to scale the dynos using heroku ps:scale web=1 which will start the app. By mistake, when 
+  I scaled it 0 my app crashed and there was error H14
 
 - Postgres column names are case sensitive
 
