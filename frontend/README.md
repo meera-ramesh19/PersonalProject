@@ -1,3 +1,66 @@
+# Introduction
+
+The repo specifies the frontend part of the project
+
+---
+
+> Be sure to add that lovely star 😀 and fork it for your own copy
+
+---
+
+# Objectives
+
+- Use charts table to perform CRUD operations to the backend and chart the data values using d3.js
+
+---
+
+# Who is this for?
+
+- Perform CRUD operations using React and to chart table data using d3.js
+
+---
+
+# Packages need to be installed to run the forked repo
+
+- npm i axios bootstrap react-bootstrap d3 framer-motion react-icons react-pagination --save
+
+## Lessons Learnt
+
+- Biggest mistake made was not cleaning the data in the backend so the frontend can work seamlessly
+
+- The entire project was a concept so figuring out on how to proceed was a dilemma due to time  
+  constraints
+
+- Making it responsive has been one of the challenges I am facing due to charts, tables
+
+- Sending mutiple queries from one Component to the other was quite a bit of struggle.For some
+  reason backend was not performing the queries sent.
+
+- Each time there was a problem with data the frontend would not display the results because of
+  the format of the fields in the data
+
+- The header columns being CamelCase in the backend caused a lot of problems with data not
+  not bieng displayed resulting in a lot of errors.
+
+- Had to add and drop database in the backend and the python repo quite a number of times for it
+  to work properly. Dropping database in local and production schema in this repo and python repo
+  came with lot of struggles and confusion in figuring out where the error is exactly coming from.
+
+- Learning d3.js was fun but figuring out the data axis was quite a challenge along with trying to
+  scale the axis.
+
+## Local Setup
+
+### Frontend Setup
+
+- LocalVersion npm start to start the app
+
+-Frontendroutes
+
+- https://localhost:3000/charts
+
+- https://localhost:3000/equities
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
