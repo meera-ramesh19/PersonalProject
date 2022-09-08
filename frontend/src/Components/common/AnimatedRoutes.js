@@ -18,7 +18,7 @@ import AboutMe from './AboutMe'
 const AnimatedRoutes = () => {
   const location = useLocation();
   return (
-    <div>
+    <div  style={{background:'#86d0c24a'}}>
       <main>
         <AnimatePresence>
           <Routes location={location} key={location.pathname}>

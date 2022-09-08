@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import '../../styles/new.css';
 // import { ToastContainer, toast } from 'react-toastify';
 // import 'react-toastify/dist/ReactToastify.css';
 
@@ -55,96 +56,94 @@ const NewChart = () => {
 
   return (
     <div className='new'>
-      <h1 className='title'>New</h1>
+      <h2 className='title'>New</h2>
       {/* <div className='new-list'></div> */}
       <form onSubmit={handleSubmit}>
         <div className='center'>
           <div>
-          <label className='new-label1' htmlFor='equity_name'>
-            Equity_name:  
-          </label>
-          <div>
-      
-          <select
-            className='text'
-            onChange={handleTextChange}
-            id='equity_name'
-            name='equity_name'
-          >
-            <option className='text' value='⬇️ Select an option ⬇️'>
-              {' '}
-              -- Select an option --{' '}
-            </option>
-
-            {equities[0]?.map((ele, index) => {
-              return (
-                <option
-                  className='text'
-                  key={index}
-                  value={ele.equity.split(' ').join('')}
-                >
-                  {ele.equity.split(' ').join('')}
+            <label className='new-label1' htmlFor='equity_name'>
+              Equity_name:
+            </label>
+            <div>
+              <select
+                className='text'
+                onChange={handleTextChange}
+                id='equity_name'
+                name='equity_name'
+              >
+                <option className='text' value='⬇️ Select an option ⬇️'>
+                  {' '}
+                  -- Select an option --{' '}
                 </option>
-              );
-            })}
-          </select>
+
+                {equities[0]?.map((ele, index) => {
+                  return (
+                    <option
+                      className='text'
+                      key={index}
+                      value={ele.equity.split(' ').join('')}
+                    >
+                      {ele.equity.split(' ').join('')}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
           </div>
+          <div>
+            <label className='new-label1' htmlFor='chart_name'>
+              Chart Name:
+            </label>
+            <div>
+              <input
+                className='text'
+                id='chart_name'
+                type='text'
+                placeholder='Name Of chart'
+                required
+                value={chart.chart_name}
+                onChange={handleTextChange}
+              />
+            </div>
           </div>
           <div>
-          <label className='new-label1' htmlFor='chart_name'>
-            Chart Name: 
-          </label>
-          <div>
-          <input
-            className='text'
-            id='chart_name'
-            type='text'
-            placeholder='Name Of chart'
-            required
-            value={chart.chart_name}
-            onChange={handleTextChange}
-          />
+            <label className='new-label1' htmlFor='metrics'>
+              Metrics:
+            </label>
+            <div>
+              <select
+                className='text'
+                onChange={handleTextChange}
+                id='metrics'
+                name='metrics'
+              >
+                <option value='⬇️ Select an option ⬇️'>
+                  {' '}
+                  -- Select an option --{' '}
+                </option>
+                {metricValue.map((metric, index) => (
+                  <option key={index} value={metric.value.toLowerCase()}>
+                    {metric.label.toLowerCase()}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
-          </div>  
-          <div> 
-          <label className='new-label1' htmlFor='metrics'>
-            Metrics: 
-          </label>
           <div>
-      
-          <select
-            className='text'
-            onChange={handleTextChange}
-            id='metrics'
-            name='metrics'
-          >
-            <option value='⬇️ Select an option ⬇️'>
-              {' '}
-              -- Select an option --{' '}
-            </option>
-            {metricValue.map((metric, index) => (
-              <option key={index} value={metric.value.toLowerCase()}>
-                {metric.label.toLowerCase()}
-              </option>
-            ))}
-          </select>
-          </div>
-          </div> 
-          <div>
-          <label className='new-label1' htmlFor='users'>
-            Users: 
-          </label>
-          <div>
-          <input
-            className='text'
-            id='users'
-            value={chart.users}
-            type='text'
-            placeholder='user name'
-            onChange={handleTextChange}
-            required
-          />
-           </div>
+            <label className='new-label1' htmlFor='users'>
+              Users:
+            </label>
+            <div>
+              <input
+                className='text'
+                id='users'
+                value={chart.users}
+                type='text'
+                placeholder='user name'
+                onChange={handleTextChange}
+                required
+              />
+            </div>
           </div>
           <br />
           <input className='button' type='submit' />

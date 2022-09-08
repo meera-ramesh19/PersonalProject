@@ -40,7 +40,6 @@ const ChartData = () => {
     axios
       .get(eq_url)
       .then((res) => {
-       
         setPriceInfo(res.data.payload.price);
         setChartInfo(res.data.payload);
         setMetricInfo(res.data.payload.metric);
@@ -91,13 +90,14 @@ const ChartData = () => {
   };
 
   return (
-    <div className='show' style={{background:'#86d0c24a '}}>
-      <h2 className='show-title' style={{fontSize:'1.5rem'}}>
-        <span>Chart Name:</span> 
-        {chartInfo.chart_name}
-      </h2>
+    <div className='show'>
+      
 
       <div className='show-info'>
+      <h2 className='show_p'>
+        <span>Chart Name:</span>
+        {chartInfo.chart_name}
+      </h2>
         <h2 className='show_p'>
           {/* <span> Metric: </span> {chartInfo.metric} */}
           <span> Metric: </span> {metricInfo}
@@ -119,10 +119,17 @@ const ChartData = () => {
         />
       </div>
 
-      <button className='toggle' onClick={() => toggleValues(metricInfo)}>
+     <div className='toggle'>
+      <button className='toggle-btn' 
+      style={{padding:'1rem',
+      borderRadius:'1rem',
+      margin:'0 auto',
+      textAlign:'center',
+      backgroundColor: '#86d0c24a'}}
+      onClick={() => toggleValues(metricInfo)}>
         Toggle Metrics
       </button>
-
+      </div>
       <div className='bars'>
         <BarChart
           data={defaultData}
@@ -134,9 +141,14 @@ const ChartData = () => {
         />
       </div>
 
-      <div className='showNavigation'>
-        <Link to={`/charts`} style={{ margin: '0 auto' }}>
-          <button className='show-button'>Back</button>
+       <div className='chartNavigation'> 
+        <Link to={`/charts`}>
+          <button className='chart_button' 
+          style={{padding:'1rem',
+      borderRadius:'1rem',
+      margin:'0 auto',
+      textAlign:'center',
+      backgroundColor: '#86d0c24a'}}>Back</button>
         </Link>
       </div>
     </div>

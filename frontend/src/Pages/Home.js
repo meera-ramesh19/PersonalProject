@@ -13,7 +13,7 @@ const Home = () => {
       transition={{ duration: 0.5 }}
       style={{
         textAlign: 'center',
-        backgroundColor: '#87CEEB '
+        // backgroundColor: '#87CEEB '
         // height: '100vh',
         // width:'800px'
       }}
@@ -23,19 +23,9 @@ const Home = () => {
       <div className='appText' >
         <h3>Invested in stocks listed on investing website? </h3>
         <h4>
-        Stock Watch helps you find stocks from investing.com and lets you perform crud operation to keep an eye on your stock prices.
-        <h4>
-
-        </h4>
-        Stock watch also graphs your stock prices to visually compare how the stocks are performing.
+        Stock Watch helps you find stocks from investing.com and lets you perform crud operation to keep track of the stock prices. Stock watch also graphs your stock prices to visually compare how the stocks are performing.
         </h4>
         <img src={EquityLogo} alt=''/>
-        {/* <picture>
-        <source srcSet={imageWebp} type="image/webp" />
-        <source srcSet={imageJpg} type="image/jpeg" />
-        <img src={imageJpg} alt="Alt Text!" ref={image} />
-        
-      </picture> */}
       </div>
     </motion.div>
   );

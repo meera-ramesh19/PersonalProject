@@ -1,8 +1,7 @@
-svg {
-  background: #86d0c24a;
+.zoomable {
+  /* background-color: #86d0c24a; */
   overflow: visible;
   display: block;
   width: 100%;
   height: auto;
-  color:black;
 }

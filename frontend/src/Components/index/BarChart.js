@@ -1,3 +1,5 @@
+// code basic d3.js from TheMuratiorium https://www.youtube.com/watch?v=LQHt0wr3ybw
+
 import React, { useRef, useEffect, useState } from 'react';
 import { select, axisBottom, axisRight, scaleLinear, scaleBand } from 'd3';
 import ResizeObserver from 'resize-observer-polyfill';
@@ -7,13 +9,14 @@ import './BarChart.css';
 const useResizeObserver = (ref) => {
   const [dimensions, setDimensions] = useState(null);
   useEffect(() => {
-    const observeTarget = ref.current;
+  const observeTarget = ref.current;
     const resizeObserver = new ResizeObserver((entries) => {
       entries.forEach((entry) => {
         setDimensions(entry.contentRect);
       });
-    });
-    resizeObserver.observe(observeTarget);
+  });
+
+  resizeObserver.observe(observeTarget);
     return () => {
       resizeObserver.unobserve(observeTarget);
     };
@@ -40,18 +43,18 @@ function BarChart(props) {
   const dimensions = useResizeObserver(wrapperRef);
 
   const defaultDiff = getDifferences(props.data);
-  const priceDiff = getDifferences(props.price);
-  const highDiff = getDifferences(props.high);
-  const lowDiff = getDifferences(props.low);
-  const openDiff = getDifferences(props.open);
+  // const priceDiff = getDifferences(props.price);
+  // const highDiff = getDifferences(props.high);
+  // const lowDiff = getDifferences(props.low);
+  // const openDiff = getDifferences(props.open);
 
   console.log('defaultDiff', defaultDiff);
 
   const data = defaultDiff;
   const minData = min(data);
   const maxData = max(data);
-  const yDomainMin = minData;
-  const yDomainMax = maxData;
+  // const yDomainMin = minData;
+  // const yDomainMax = maxData;
 
   // will be called initially and on every data change
   useEffect(() => {
@@ -79,8 +82,8 @@ function BarChart(props) {
     const xAxis = axisBottom(xScale).ticks(data.length);
     svg
       .select('.x-axis')
-      .style('transform', `translateY(${dimensions.height}px)`)
-      //.style('transform', `translateY(0 px)`)
+        .style('transform', `translateY(${dimensions.height}px)`)
+      //  .style('transform', `translateY(0 px)`)
       .call(xAxis);
 
     // create y-axis
@@ -88,7 +91,7 @@ function BarChart(props) {
     svg
       .select('.y-axis')
       //.style('transform', `translateX(${dimensions.width}px)`)
-      .style('transform', `translateX(${dimensions.width - 135}px)`)
+      .style('transform', `translateX(${dimensions.width-162 }px)`)
       .call(yAxis);
 
     // draw the bars
@@ -108,13 +111,13 @@ function BarChart(props) {
         svg
           .selectAll('.tooltip')
           .data([value])
-          .join((enter) => enter.append('text').attr('y', yScale(value) - 4))
+          .join((enter) => enter.append('text').attr('y', yScale(value)-4 ))
           .attr('class', 'tooltip')
           .text(value)
           .attr('x', xScale(index))
           .attr('text-anchor', 'middle')
           .transition()
-          .attr('y', yScale(value) - 8)
+          .attr('y', yScale(value) - 8 )
           .attr('opacity', 1);
       })
       .on('mouseleave', () => svg.select('.tooltip').remove())
@@ -125,7 +128,7 @@ function BarChart(props) {
 
   return (
     <div ref={wrapperRef} style={{ marginBottom: '2rem' }}>
-      <svg ref={svgRef}>
+      <svg ref={svgRef} className='barChartValues' >
         <g className='x-axis' />
         <g className='y-axis' />
       </svg>

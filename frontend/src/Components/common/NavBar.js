@@ -24,7 +24,7 @@ export default function NavBar() {
           alt='logo'
           style={{ width: '50px', height: '50px' }}
         /> */}
-        <FcComboChart />
+        <FcComboChart size={'4em'} />
       </Link>
       <div onClick={handleClick} className='nav-icon'>
         {open ? <FiX /> : <FiMenu />}

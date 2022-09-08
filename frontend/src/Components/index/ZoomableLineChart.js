@@ -1,3 +1,5 @@
+// code basic d3.js from TheMuratiorium https://www.youtube.com/watch?v=dxUyI2wfYSI
+
 import React, { useRef, useEffect, useState } from 'react';
 import {
   select,
@@ -146,6 +148,7 @@ function ZoomableLineChart(props) {
     <React.Fragment>
       <div ref={wrapperRef} style={{ marginBottom: '2rem' }}>
         <svg
+          className='zoomable'
           ref={svgRef}
           preserveAspectRatio='xMinYMin meet'
           viewBox={`0 0 550 600`}

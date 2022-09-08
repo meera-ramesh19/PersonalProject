@@ -1,12 +1,7 @@
-svg {
+.barChartValues {
   overflow: visible;
   display: block;
-  width: 100%;
-  background-color: #86d0c24a;
-}
-
-button {
-  width: 100px;
-  border: 1px solid black;
-  margin: 0 auto 5px;
+  width: 50%;
+  color: black;
+  /* background-color: #86d0c24a;  */
 }

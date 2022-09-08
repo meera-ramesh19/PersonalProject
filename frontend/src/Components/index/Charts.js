@@ -21,7 +21,7 @@ const Charts = () => {
     <div className='charts'>
       <h1 className='title-charts'>Chart</h1>
       <Table
-        className=' table table-responsive'
+        className='indextable-container table table-responsive'
         stripped='true'
         bordered
         hover

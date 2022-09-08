@@ -3,7 +3,6 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import NavBar from './Components/common/NavBar';
 import TagLine from './Components/common/TagLine';
-import Footer from './Components/common/Footer';
 import AnimatedRoutes from './Components/common/AnimatedRoutes';
 
 export default function App() {
@@ -13,7 +12,6 @@ export default function App() {
         <NavBar />
         <TagLine />
         <AnimatedRoutes />
-        {/* <Footer />  */}
       </Router>
     </div>
   );

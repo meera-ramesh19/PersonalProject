@@ -1,23 +1,25 @@
-import GitHubMark64 from '../../assets/GitHubMark64.png';
+import { autoType } from 'd3';
+
 import LILogo from '../../assets/LILogo.png';
+import {FaGithub} from 'react-icons/fa';
+import {FaLinkedin }from 'react-icons/fa';
 import './about.css';
 
 export default function AboutMe() {
   return (
     <div className='aboutMe'>
-      <h3 className='name'>Meera Ramesh</h3>
+     
      <div className='box'>
-      
+     <h3 className='name'>Meera Ramesh</h3>
     <div className='picInfo'>
-     <div className='image'>
+   
       <img
         className='profile'
         src='https://avatars.githubusercontent.com/u/46873861?v=4'
-        alt='Meera'style={{width:'150px', height:'150px'}}
+        alt='Meera'
       />
     
-      </div>
-      <br></br>
+    
       <div className='bio' >
       I am a Software Engineer/Full Stack Developer 🚀 from NYC, proficient in Full Stack Web Development,and Data Visualization tools like Tableau and Power BI.
 
@@ -27,18 +29,21 @@ export default function AboutMe() {
    
       <div className='links'>
         <a className='github' href='https://github.com/meera-ramesh19'>
-         <img align='center' src={GitHubMark64} alt='' style={{width:'150px', height:'150px'}}/>
+          <FaGithub/>
+         {/* <img align='center' src={GitHubMark64} alt='' style={{width:'100px', height:'100px',margin:'0 auto',textAlign:'center'}}/> */}
         </a>
         <a className='linkedin' href='https://www.linkedin.com/in/meeraramesh/' target='blank'>
-          <img
+          {/* <img
             align='center'
             src={LILogo}
             alt='meeraramesh'
-            style={{padding:'0 1rem',width:'150px', height:'150px'}}
-          />
+            style={{padding:
+            '0 1rem',width:'150px', height:'100px',margin:'0 auto'}}  />*/}
+            <FaLinkedin/>
+         
         </a>
       </div>
       </div>
-    </div>
+   </div> 
   );
 }

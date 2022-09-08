@@ -81,13 +81,13 @@
 .social-icons li.title {
   margin-right: 15px;
   text-transform: uppercase;
-  color: black;
+  color: #50bfbf;
   font-weight: 700;
   font-size: 13px;
 }
 .social-icons a {
   background-color: black;
-  color: #818a91;
+  color:#50bfbf;
   font-size: 16px;
   display: inline-block;
   line-height: 44px;

@@ -21,7 +21,7 @@ const EquityNames = () => {
       <h1 className='title-equity'>Equity Names</h1>
       <div className='equity-name'>
         <Table
-          className='table-container'
+          className='table-container table table-responsive'
           stripped='true'
           bordered
           hover

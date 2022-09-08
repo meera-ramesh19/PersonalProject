@@ -48,7 +48,7 @@ tr.green th {
 td {
   text-align: center;
   padding: 0.5rem;
-  /* border: 1px solid black; */
+
 }
 
 tbody td:not(td:first-of-type):hover {
@@ -65,3 +65,8 @@ tbody td:not(td:first-of-type):hover {
   text-decoration: none;
 }
 
+.indextable-container {
+  max-width: auto;
+ margin-left: auto;
+ margin-right: auto;
+}

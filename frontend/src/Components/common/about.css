@@ -1,117 +1,79 @@
-/* .profile {
-  height: 250px;
-  padding: 2%;
-  border: 2px solid #86d0c24a;
-  box-sizing: border-box;
-  position: relative;
-  cursor: pointer;
-  transform: rotate(-2deg);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  float: left;
-}
-/* 
-.aboutpage {
-  margin: auto;
-  width: 90%;
-  font-size: 2rem;
-  display: flex;
-  flex-direction: column;
-  color: black;
-  padding-bottom: 20px;
-  /* background-image: url('https://media.istockphoto.com/photos/old-wooden-pallet-plank-texture-background-picture-id1204646431?b=1&k=20&m=1204646431&s=170667a&w=0&h=S2LPM5JFE04V1DLxtAl5DOtx-6NRc--hRyfn2Z1iAaA='); *
-  padding: 20px;
-  border-radius: 20px;
-}*/
+
  .aboutMe {
   font-size: 1.2rem;
-  margin: 20px;
   font-family: 'Inter';
-  background-color: #86d0c24a;
+  padding:4rem;
+  height:1000px;
+  width:900px;
+  max-width:100%;
+  text-align:center;
+  margin:0 auto;
 } 
-/*.bio {
-  font-size: 28px;
-  margin-left: 30%;
-  margin-right: 15%;
-} */
-/* 
-.about-title {
-  font-family: 'Inter';
-  font-weight: 900;
-  padding: 10px;
-  margin: 20px;
-} *
-.name {
-  padding: 2%;
-  margin: auto;
-  font-family: 'Inter';
-  font-weight: 500;
-  font-size: 2rem;
-  color: black;
-}
-.border {
-  padding: 2%;
-} */
-.aboutMe{
- height:100vh;
- background-color:#86d0c24a ;
-}
+
 
 .box {
   font-family: 'Inter';
   border: 2px solid;
-  width: 800px;
   margin: auto;
-  display:block;
+  background-color: #86d0c24a;
   padding-bottom: 20px;
   border-radius: 10px;
   color: black;
 }
-.profile{
-  text-align:center;
-}
+
 .picInfo{
-  display:block;
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap:wrap;
 }
 .image,.bio{
-  margin:3rem 2rem ;
   display:block;
 }
-.links{
+.profile{
+  display:block;
+  padding:4rem;
+  width:300px;
+  height:300px;
+  border-radius:15px;
+  transform: skewX(12deg);
+  filter: drop-shadow(5px 5px 5px #666666); 
+  
+}
+.bio {
+ margin:3rem;
+ text-align:left;
+}
+
+.links {
   display:flex;
+  flex-direction:row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 hr {
   border: #0c4b18a5 0.5px solid;
 }
-
-
-.bio {
-  margin: 20px;
-  margin-right: 20px;
+.name{
+  text-align:center;
+  padding:2rem 0;
 }
 
-.github :hover {
-  margin: 3rem;
-  color: black;
-  box-shadow: 0 15px 15px #1e3c3d;
-}
 
-@media screen and(max-width: 768px) {
 
-  /* .aboutMe {
-   width:700px;
-  } */
-  .picInfo{
-    display:block;
-  }
+
+ @media only screen and(max-width: 768px) { 
+
+ .aboutMe{
+  max-width:50%;
+  font-size:1rem;
   
-  .border,.appBio{ 
-    display:block;
-  }
-  .links{
-    display:block;
-  }
- 
+ }
+ .profile{
+   padding:0rem;
+ }
+ .bio{
+ margin:0rem;
+ }
 }
-
+ 
