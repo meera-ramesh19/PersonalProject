@@ -40,16 +40,12 @@ The repo specifies the frontend part of the project
   the format of the fields in the data
 
 - The header columns being CamelCase in the backend caused a lot of problems with data not
-  not bieng displayed resulting in a lot of errors.
+  not being displayed resulting in a lot of errors.
 
-- Had to add and drop database in the backend and the python repo quite a number of times for it
-  to work properly. Dropping database in local and production schema in this repo and python repo
-  came with lot of struggles and confusion in figuring out where the error is exactly coming from.
+- I had to add and drop database in the backend and the python repo quite a number of times for it
+  to update any change to reflect in Frontend. Dropping database in local and production schema in this repo and python repo came with lot of struggles and confusion in figuring out where the error is exactly coming from.
 
-- Learning d3.js was fun but figuring out the data axis was quite a challenge along with trying to
-  scale the axis.
-
-## Local Setup
+- Learning d3.js with this [tutorial](https://www.youtube.com/watch?v=dxUyI2wfYSI) but figuring out the data axis was quite a challenge but with trial and error I did manage to display a decent axis to work but it does not scale properly.
 
 ### Frontend Setup
 
