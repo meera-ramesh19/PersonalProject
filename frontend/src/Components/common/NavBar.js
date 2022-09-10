@@ -19,11 +19,6 @@ export default function NavBar() {
   return (
     <nav className='navbar'>
       <Link to='/' className='nav-logo'>
-        {/* <img
-          src={WixLogo}
-          alt='logo'
-          style={{ width: '50px', height: '50px' }}
-        /> */}
         <FcComboChart size={'4em'} />
       </Link>
       <div onClick={handleClick} className='nav-icon'>
@@ -61,25 +56,6 @@ export default function NavBar() {
           </Link>
         </li>
       </ul>
-
-      {/* <ul>
-          
-               <li class="fullwidth">
-                  <Link to='/'>Home </Link>
-               </li>
-      
-               <li >
-                  <Link to='/about'>About </Link>
-               </li>
-    
-               <li>
-                  <Link to='/stocks'>Stocks </Link>
-               </li>
-  
-               <li>
-                  <Link to='/stocks/new'>New</Link>
-               </li>
-            </ul> */}
     </nav>
   );
 }

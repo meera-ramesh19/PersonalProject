@@ -33,8 +33,7 @@ const ChartDetails = () => {
   };
   return (
     <div className='shows'>
-    
-      <p style={{ textAlign: 'center',color:'black' }}>Show Charts</p>
+      <p style={{ textAlign: 'center', color: 'black' }}>Show Charts</p>
 
       <div className='show-info'>
         <h2 className='show_p'>

@@ -1,6 +1,5 @@
 import EquityNames from '../Components/equity/EquityNames';
 import { motion } from 'framer-motion';
-// import '../styles/edit.css';
 
 const ShowEquity = () => {
   return (

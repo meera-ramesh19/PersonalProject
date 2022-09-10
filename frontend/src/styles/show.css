@@ -3,18 +3,11 @@ h1 {
 }
 
 .shows {
-  /* text-align: center;
-  width: auto;
-  height: auto; */
   background-color: #86d0c24a;
-  /* border-radius: 10px;
-  padding-bottom: 10px;
-  margin: 0 auto; */
 }
 
 .show-title {
   font-size: 2rem;
-  /* padding-top: 1%;*/
   padding-bottom: 1%;
   text-align: center;
   color: black;

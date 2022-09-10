@@ -45,11 +45,6 @@ const EquityNames = () => {
             })}
           </tbody>
         </Table>
-        {/* <ul className='lists'>
-        {names[0]?.map((name,index) => (
-          <li key={name.equity}>{name.equity.split(' ').join('')}</li>
-        ))}
-        </ul> */}
       </div>
       <br />
       <button className='nameback-button'>

@@ -51,19 +51,10 @@ tr.green th {
 }
 
 .table {
-  /* overflow: visible;
-  max-height: auto;
-  border: 1px solid black;
-  margin: 0 auto; */
   height:300px; 
  display: -moz-groupbox;
 }
 
-/* th {
-  position: sticky;
-  top: 0;
-  background: white;
-} */
 tbody{
   overflow: scroll;
   height: 200px;

@@ -25,14 +25,7 @@ const LineChart = (props) => {
       .x((value, index) => index * 14)
       .y((value) => 240 - value)
       .curve(curveCardinal);
-    // svg
-    //   .selectAll("circle")
-    //   .data(data)
-    //   .join("circle")
-    //   .attr("r", value => value)
-    //   .attr("cx", value => value * 2)
-    //   .attr("cy", value => value * 2)
-    //   .attr("stroke", "red");
+
     svg
       .selectAll('path')
       .data([data])
@@ -44,9 +37,8 @@ const LineChart = (props) => {
 
   return (
     <div className='chart-card'>
-      <svg style={{margin:'1rem'}} ref={svgRef}></svg>
-      {/* <BarChart data={data} /> */}
-     
+      <svg style={{ margin: '1rem' }} ref={svgRef}></svg>
+
       <br />
       <button onClick={() => setData(data.map((value) => value + 5))}>
         Update data

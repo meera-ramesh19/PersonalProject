@@ -1,40 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-/* .home {
-  width: 90%;
-  margin: auto;
-  color: #262626;
-  background: #a42a04;
+h1,
+h3 {
+  text-align: center;
 }
-
-.about {
-  margin: auto;
-  position: absolute;
-  bottom: 0;
-  height: 50px;
-  font-size: 20px;
-  left: 50%;
-  font-family: 'Inter', serif;
-  color: rgb(0, 0, 0);
-} */
-
-.appText h3,
-.appText h4 {
-  width: 800px;
-  height:100vh;
+.appText {
+  width: 600px;
+  height: 100vh;
   margin: 1rem auto;
+  text-align: left;
   color: #111;
   font-family: 'Inter';
 }
 
 @media (max-width: 768px) {
-  .appText h3,
-  .appText h4 {
-    width: 400px;
+  .appText {
+    width: 250px;
+    text-align: center;
   }
   img {
     text-align: center;
-    width: 470px;
-    height: 400px;
+    width: 250px;
+    height: 250px;
   }
 }

@@ -23,7 +23,6 @@ const EditChart = () => {
 
   const [equity, setEquity] = useState([]);
 
-
   useEffect(() => {
     axios.get(`${API}/equities/names`).then((res) => {
       setEquity(res.data.payload);

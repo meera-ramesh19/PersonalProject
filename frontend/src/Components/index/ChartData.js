@@ -49,17 +49,6 @@ const ChartData = () => {
         setNameInfo(res.data.payload.chart_name);
         setDefaultData(res.data.payload.base_metric);
         setDateInfo(res.data.payload.dates);
-        // console.log(
-        //   'inCahrtData',
-        //   metricInfo,
-        //   priceInfo,
-        //   openInfo,
-        //   highInfo,
-        //   lowInfo,
-        //   chartNameInfo,
-        //   dateInfo,
-        //   defaultData
-        // );
       })
       .catch(() => {
         console.log('error');
@@ -91,15 +80,12 @@ const ChartData = () => {
 
   return (
     <div className='show'>
-      
-
       <div className='show-info'>
-      <h2 className='show_p'>
-        <span>Chart Name:</span>
-        {chartInfo.chart_name}
-      </h2>
         <h2 className='show_p'>
-          {/* <span> Metric: </span> {chartInfo.metric} */}
+          <span>Chart Name:</span>
+          {chartInfo.chart_name}
+        </h2>
+        <h2 className='show_p'>
           <span> Metric: </span> {metricInfo}
         </h2>
 
@@ -119,16 +105,20 @@ const ChartData = () => {
         />
       </div>
 
-     <div className='toggle'>
-      <button className='toggle-btn' 
-      style={{padding:'1rem',
-      borderRadius:'1rem',
-      margin:'0 auto',
-      textAlign:'center',
-      backgroundColor: '#86d0c24a'}}
-      onClick={() => toggleValues(metricInfo)}>
-        Toggle Metrics
-      </button>
+      <div className='toggle'>
+        <button
+          className='toggle-btn'
+          style={{
+            padding: '1rem',
+            borderRadius: '1rem',
+            margin: '0 auto',
+            textAlign: 'center',
+            backgroundColor: '#86d0c24a',
+          }}
+          onClick={() => toggleValues(metricInfo)}
+        >
+          Toggle Metrics
+        </button>
       </div>
       <div className='bars'>
         <BarChart
@@ -141,14 +131,20 @@ const ChartData = () => {
         />
       </div>
 
-       <div className='chartNavigation'> 
+      <div className='chartNavigation'>
         <Link to={`/charts`}>
-          <button className='chart_button' 
-          style={{padding:'1rem',
-      borderRadius:'1rem',
-      margin:'0 auto',
-      textAlign:'center',
-      backgroundColor: '#86d0c24a'}}>Back</button>
+          <button
+            className='chart_button'
+            style={{
+              padding: '1rem',
+              borderRadius: '1rem',
+              margin: '0 auto',
+              textAlign: 'center',
+              backgroundColor: '#86d0c24a',
+            }}
+          >
+            Back
+          </button>
         </Link>
       </div>
     </div>

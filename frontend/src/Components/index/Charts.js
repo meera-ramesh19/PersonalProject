@@ -8,7 +8,6 @@ const API = process.env.REACT_APP_API_URL;
 
 const Charts = () => {
   const [charts, setCharts] = useState([]);
-  // const [flag, setFlag] = useState(false);
 
   useEffect(() => {
     axios.get(`${API}/charts`).then((res) => {
@@ -99,13 +98,6 @@ const Charts = () => {
           })}
         </tbody>
       </Table>
-
-      {/* <section className='all-charts'>
-        {charts?.map((chart) => {
-          console.log('id=' ,chart.id)
-           return <Chart key={chart.id} chart={chart} />;
-        })}
-      </section> */}
       <br />
       <button className='indexback-button'>
         <Link to={'/'}>Back</Link>

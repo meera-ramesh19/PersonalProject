@@ -2,8 +2,6 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../../styles/new.css';
-// import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -24,7 +22,6 @@ const NewChart = () => {
   ];
 
   const [equities, setEquities] = useState([]);
-  const [metrics, setMetrics] = useState('⬇️ Select a metric ⬇️');
 
   useEffect(() => {
     axios.get(`${API}/equities/names`).then((res) => {
@@ -32,10 +29,6 @@ const NewChart = () => {
       setEquities(res.data.payload);
     });
   }, []);
-
-  // const [options, setOptions] = useState(equities);
-
-  // const [selected, setSelected] = useState([]);
 
   const handleTextChange = (event) => {
     console.log(event.target.id, event.target.value);
@@ -57,7 +50,7 @@ const NewChart = () => {
   return (
     <div className='new'>
       <h2 className='title'>New</h2>
-      {/* <div className='new-list'></div> */}
+
       <form onSubmit={handleSubmit}>
         <div className='center'>
           <div>
@@ -146,11 +139,12 @@ const NewChart = () => {
             </div>
           </div>
           <br />
-          <input className='button' type='submit' />
+          <input className='button' type='submit'  value='Submit'/>
         </div>
       </form>
+      
     </div>
   );
-};
+};  
 
 export default NewChart;

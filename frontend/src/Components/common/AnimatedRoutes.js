@@ -12,13 +12,13 @@ import Edit from '../../Pages/Edit';
 import Data from '../../Pages/Data';
 import ShowEquities from '../../Pages/ShowEquities';
 import EquityIndex from '../../Pages/EquityIndex';
-import AboutMe from './AboutMe'
+import AboutMe from './AboutMe';
 
 //This component to define navbar animate tranisitons
 const AnimatedRoutes = () => {
   const location = useLocation();
   return (
-    <div  style={{background:'#86d0c24a'}}>
+    <div style={{ background: '#86d0c24a' }}>
       <main>
         <AnimatePresence>
           <Routes location={location} key={location.pathname}>
@@ -29,8 +29,8 @@ const AnimatedRoutes = () => {
             <Route path='/charts/data' element={<Data />} />
             <Route path='/charts/:id' element={<Show />} />
             <Route path='/charts/:id/edit' element={<Edit />} />
-            <Route path='/equities' element={<EquityIndex/>} />
-            <Route path='/equities/names' element={<ShowEquities/>} />
+            <Route path='/equities' element={<EquityIndex />} />
+            <Route path='/equities/names' element={<ShowEquities />} />
             <Route path='*' element={<FourOFour />} />
           </Routes>
         </AnimatePresence>

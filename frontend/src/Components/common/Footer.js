@@ -6,7 +6,6 @@ import './Footer.css';
 
 const Footer = () => {
   return (
-    // <footer className='site-footer'>
     <footer className='flex-footer'>
       <div className='container'>
         <hr />
@@ -20,7 +19,6 @@ const Footer = () => {
           </div>
           <div className='col-md-4 col-sm-6 col-xs-12'>
             <ul className='social-icons'>
-           
               <li>
                 <a className='twitter' href='https://twitter.com/Meerarams'>
                   <FaTwitter color='#007bb6' />

@@ -33,16 +33,6 @@ th {
   font-size: 1.5rem;
   vertical-align: middle;
 }
-/* 
-.pagination-wrapper {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; *
-  display:inline-block;
-  
-  /* padding-top: 10; *
-} */
 
 /* Override some Bootstrap pagination styles */
 ul.pagination {
@@ -71,10 +61,8 @@ ul.pagination a.page-link:hover {
 }
 
 @media (max-width: 768px) {
-.pagination-wrapper {
- 
-  flex-wrap: wrap;
-  
-  /* padding-top: 10; */
-}
+  .pagination-wrapper {
+    flex-wrap: wrap;
+
+  }
 }

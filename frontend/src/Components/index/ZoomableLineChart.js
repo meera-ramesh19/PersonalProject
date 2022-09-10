@@ -19,6 +19,7 @@ import './ZoomableLineChart.css';
  */
 
 function ZoomableLineChart(props) {
+  
   console.log('props', props);
   const name = props.name;
   const metric = props.metric;
@@ -26,17 +27,17 @@ function ZoomableLineChart(props) {
   const open = props.open;
   const high = props.high;
   const low = props.low;
+
+  
   const data = props.base_metric;
   const date = props.date;
 
-  // const [height, setHeight] = useState([]);
-  // const [width, setWidth] = useState([]);
+  
   const svgRef = useRef();
   const wrapperRef = useRef();
   const dimensions = useResizeObserver(wrapperRef);
   const [currentZoomState, setCurrentZoomState] = useState();
-  console.log('minmax', min(data), max(data));
-
+ 
   const minData = min(data);
   const maxData = max(data);
   const yDomainMin = minData - 1;
@@ -47,19 +48,17 @@ function ZoomableLineChart(props) {
   const box_height = 600;
   const box_width = 600;
 
-  // will be called initially and on every data change
+  
   useEffect(() => {
+ 
     const svg = select(svgRef.current);
     const svgContent = svg.select('.content');
 
     const { width, height } =
       dimensions || wrapperRef.current.getBoundingClientRect();
 
-    // setHeight(height);
-    // setWidth(width);
+  
 
-    console.log('data', data);
-    // scales + line generator
     const xScale = scaleLinear()
       .domain([2, data.length + 5])
       .range([50, box_width]);
@@ -78,7 +77,6 @@ function ZoomableLineChart(props) {
       .y((d) => yScale(d))
       .curve(curveCardinal);
 
-    // render the line
     svgContent
       .selectAll('.myLine')
       .data([data])
@@ -87,7 +85,7 @@ function ZoomableLineChart(props) {
       .attr('stroke', 'black')
       .attr('fill', 'none')
       .attr('d', lineGenerator);
-
+   
     svgContent
       .selectAll('.myDot')
       .data(data)
@@ -102,6 +100,7 @@ function ZoomableLineChart(props) {
         // events have changed in d3 v6:
         // https://observablehq.com/@d3/d3v6-migration-guide#events
         const index = svg.selectAll('.myDot').nodes().indexOf(event.target);
+    
         svg
           .selectAll('.tooltip')
           .data([value])
@@ -125,8 +124,10 @@ function ZoomableLineChart(props) {
       .tickFormat((index) => index - 2);
     const yAxis = axisLeft(yScale);
 
-    svg.select('.x-axis').attr('transform', 'translate(-50, 600)').call(xAxis);
+  
 
+    svg.select('.x-axis').attr('transform', 'translate(-50, 600)').call(xAxis);
+    // to fix the y axis, I moved the y axis 3 pixels to the left.
     svg.select('.y-axis').attr('transform', 'translate(-3, 0)').call(yAxis);
 
     // zoom
