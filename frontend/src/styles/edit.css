@@ -74,6 +74,9 @@ input[type='submit'] {
 
 .edit-button{
 background-color:#86d0c24a; 
+padding:1rem;
+border-radius: 10%;
+font-size: 1rem;
 }
 @media (max-width: 768px) {
   .new {

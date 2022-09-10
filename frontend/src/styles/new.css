@@ -56,17 +56,17 @@
   color: #1d3c3d;
 }
 
-.button {
+input[type='submit']{
   border: 2px solid #111;
   border-radius: 8px;
-  width:10px;
+ 
   color: #111;
   cursor: pointer;
   font-family: 'Inter';
-  font-size: 1rem;
+  font-size: 0.5rem;
   background-color: #86d0c24a;
   text-align:center;
-  padding: 1rem 1rem;
+  
 }
 
 @media (max-width: 768px) {

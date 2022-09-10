@@ -139,7 +139,7 @@ const NewChart = () => {
             </div>
           </div>
           <br />
-          <input className='button' type='submit'  value='Submit'/>
+          <input className='button' type='submit' id='submit' value='Submit'/>
         </div>
       </form>
       
