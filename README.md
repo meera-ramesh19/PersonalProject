@@ -4,9 +4,11 @@
 
 ## Important Links
 
-- [Deplayed API server](https://fathomless-forest-50934.herokuapp.com/charts)
+- [Deployed API server](https://fathomless-forest-50934.herokuapp.com/charts)
 
-- [Deplayed Frontend]()
+- [Deployed Frontend](https://stockwatchinvesting.netlify.app)
+
+- [PythonPersonalProject(websitescraper repo)](https://github.com/meera-ramesh19/PythonPersonalProject)
 
 - [ERD](https://miro.com/app/board/uXjVPdchovw=/)
 
